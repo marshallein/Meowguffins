@@ -1,16 +1,25 @@
 fileFormatVersion: 2
-guid: c657c5fc7e0bc4349bd2d2f740d2c0e0
+guid: 986863d180d8eb141affc1d1cd146d81
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3646123972622350718
-    second: Meow-Knight_Take_Damage_0
+      213: 2346428892977187499
+    second: Meow-Knight_Idle_0
   - first:
-      213: 7417206342834096107
-    second: Meow-Knight_Take_Damage_1
+      213: -6353061015005667862
+    second: Meow-Knight_Idle_1
   - first:
-      213: 5255111949883716298
-    second: Meow-Knight_Take_Damage_2
+      213: 7197642231876940338
+    second: Meow-Knight_Idle_2
+  - first:
+      213: -908633922495034233
+    second: Meow-Knight_Idle_3
+  - first:
+      213: 7863079153137926569
+    second: Meow-Knight_Idle_4
+  - first:
+      213: -122430021104182047
+    second: Meow-Knight_Idle_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,11 +121,32 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Meow-Knight_Take_Damage_0
+      name: Meow-Knight_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 130
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa4e9075a0309020800000000000000
+      internalID: 2346428892977187499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow-Knight_Idle_1
       rect:
         serializedVersion: 2
         x: 2
-        y: 52
+        y: 104
         width: 12
         height: 15
       alignment: 0
@@ -126,39 +156,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2860fcc909d566dc0800000000000000
-      internalID: -3646123972622350718
+      spriteID: aed5434baa465d7a0800000000000000
+      internalID: -6353061015005667862
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Meow-Knight_Take_Damage_1
+      name: Meow-Knight_Idle_2
       rect:
         serializedVersion: 2
         x: 2
-        y: 26
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: be7866aeed53fe660800000000000000
-      internalID: 7417206342834096107
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Meow-Knight_Take_Damage_2
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 0
+        y: 78
         width: 12
         height: 16
       alignment: 0
@@ -168,8 +177,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac2bab3c978ede840800000000000000
-      internalID: 5255111949883716298
+      spriteID: 232ff53a97923e360800000000000000
+      internalID: 7197642231876940338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow-Knight_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 52
+        width: 12
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78c40daf242e363f0800000000000000
+      internalID: -908633922495034233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow-Knight_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 26
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1c09354d44f1d60800000000000000
+      internalID: 7863079153137926569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Meow-Knight_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ecdd326b8a0d4ef0800000000000000
+      internalID: -122430021104182047
       vertices: []
       indices: 
       edges: []
