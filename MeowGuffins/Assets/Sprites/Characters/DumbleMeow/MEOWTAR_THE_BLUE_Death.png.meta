@@ -1,37 +1,7 @@
 fileFormatVersion: 2
 guid: 637808a343839e145ac95d8c6888a1b5
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 1329312366445565843
-    second: MEOWTAR_THE_BLUE_Death_0
-  - first:
-      213: -3501628365026616051
-    second: MEOWTAR_THE_BLUE_Death_1
-  - first:
-      213: -5681776664529605132
-    second: MEOWTAR_THE_BLUE_Death_2
-  - first:
-      213: -6417804318425751340
-    second: MEOWTAR_THE_BLUE_Death_3
-  - first:
-      213: -8205931614605289898
-    second: MEOWTAR_THE_BLUE_Death_4
-  - first:
-      213: -8641537836758513180
-    second: MEOWTAR_THE_BLUE_Death_5
-  - first:
-      213: -831693455154455325
-    second: MEOWTAR_THE_BLUE_Death_6
-  - first:
-      213: -9104672870423267301
-    second: MEOWTAR_THE_BLUE_Death_7
-  - first:
-      213: -2732229403147078525
-    second: MEOWTAR_THE_BLUE_Death_8
-  - first:
-      213: 138113632465733949
-    second: MEOWTAR_THE_BLUE_Death_9
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -62,7 +32,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -71,12 +41,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -105,231 +75,9 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Death_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 234
-        width: 15
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3979585ed8aa27210800000000000000
-      internalID: 1329312366445565843
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Death_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 208
-        width: 16
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d0d182fed87b76fc0800000000000000
-      internalID: -3501628365026616051
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Death_2
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 182
-        width: 15
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4fdeb991a364621b0800000000000000
-      internalID: -5681776664529605132
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Death_3
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 156
-        width: 15
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d0e342b9f06fe6a0800000000000000
-      internalID: -6417804318425751340
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Death_4
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 130
-        width: 13
-        height: 16
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 656dd446cacae1e80800000000000000
-      internalID: -8205931614605289898
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Death_5
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 104
-        width: 12
-        height: 15
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4e949ee4f17131880800000000000000
-      internalID: -8641537836758513180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Death_6
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 78
-        width: 13
-        height: 13
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3ec5083853b3574f0800000000000000
-      internalID: -831693455154455325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Death_7
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 52
-        width: 12
-        height: 9
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b18f8425344b5a180800000000000000
-      internalID: -9104672870423267301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Death_8
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 26
-        width: 13
-        height: 6
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3847a8475db251ad0800000000000000
-      internalID: -2732229403147078525
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Death_9
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 0
-        width: 12
-        height: 6
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d3942c1fd9daae100800000000000000
-      internalID: 138113632465733949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
