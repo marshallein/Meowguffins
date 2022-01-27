@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 61c48d228ceeed44394ae23667efe366
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8329715299296872173
+    second: King_Mewrthur_Death_0
+  - first:
+      213: -2446612991554813771
+    second: King_Mewrthur_Death_1
+  - first:
+      213: -1580984459108872799
+    second: King_Mewrthur_Death_2
+  - first:
+      213: 1223889934100731715
+    second: King_Mewrthur_Death_3
+  - first:
+      213: -3130765791047345475
+    second: King_Mewrthur_Death_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +47,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,12 +56,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,9 +90,138 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: King_Mewrthur_Death_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 104
+        width: 12
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5436578, y: -0.006439209}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 319f5496118e66c80800000000000000
+      internalID: -8329715299296872173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King_Mewrthur_Death_1
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 78
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5163715, y: 0.011023967}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b005876272eb0ed0800000000000000
+      internalID: -2446612991554813771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King_Mewrthur_Death_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 52
+        width: 27
+        height: 9
+      alignment: 9
+      pivot: {x: 0.5097019, y: 0.0052028233}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad0767c2073f0ae0800000000000000
+      internalID: -1580984459108872799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King_Mewrthur_Death_3
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 26
+        width: 28
+        height: 10
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.0022922517}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347104e19612cf010800000000000000
+      internalID: 1223889934100731715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King_Mewrthur_Death_4
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 28
+        height: 10
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.02848728}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba9dadb9194d84d0800000000000000
+      internalID: -3130765791047345475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
