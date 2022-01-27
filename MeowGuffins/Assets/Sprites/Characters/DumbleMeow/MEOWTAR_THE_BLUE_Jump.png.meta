@@ -41,6 +41,12 @@ TextureImporter:
   - first:
       213: 8791540384514397021
     second: MEOWTAR_THE_BLUE_Jump_12
+  - first:
+      213: -5958589449816212473
+    second: MEOWTAR_THE_BLUE_Jump_13
+  - first:
+      213: 1924959802867905468
+    second: MEOWTAR_THE_BLUE_Jump_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -137,8 +143,8 @@ TextureImporter:
         y: 488
         width: 15
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -158,8 +164,8 @@ TextureImporter:
         y: 462
         width: 16
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,36 +178,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Jump_2
+      name: MEOWTAR_THE_BLUE_Jump_3
       rect:
         serializedVersion: 2
         x: 14
         y: 420
         width: 22
         height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e507dc014800dad90800000000000000
-      internalID: -7085006071566340002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Jump_3
-      rect:
-        serializedVersion: 2
-        x: 12
-        y: 362
-        width: 32
-        height: 34
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -214,36 +199,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Jump_4
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 311
-        width: 14
-        height: 27
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 03ae92142cae4e450800000000000000
-      internalID: 6117272313913797168
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: MEOWTAR_THE_BLUE_Jump_5
       rect:
         serializedVersion: 2
-        x: 11
-        y: 258
-        width: 14
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 12
+        y: 362
+        width: 32
+        height: 34
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -259,12 +223,12 @@ TextureImporter:
       name: MEOWTAR_THE_BLUE_Jump_6
       rect:
         serializedVersion: 2
-        x: 13
-        y: 208
-        width: 16
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 9
+        y: 311
+        width: 14
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,12 +244,12 @@ TextureImporter:
       name: MEOWTAR_THE_BLUE_Jump_7
       rect:
         serializedVersion: 2
-        x: 13
-        y: 171
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11
+        y: 258
+        width: 14
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,12 +265,12 @@ TextureImporter:
       name: MEOWTAR_THE_BLUE_Jump_8
       rect:
         serializedVersion: 2
-        x: 4
-        y: 122
+        x: 13
+        y: 208
         width: 16
         height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -322,12 +286,12 @@ TextureImporter:
       name: MEOWTAR_THE_BLUE_Jump_9
       rect:
         serializedVersion: 2
-        x: 7
-        y: 86
-        width: 15
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13
+        y: 171
+        width: 17
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -343,12 +307,12 @@ TextureImporter:
       name: MEOWTAR_THE_BLUE_Jump_10
       rect:
         serializedVersion: 2
-        x: 7
-        y: 52
-        width: 17
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4
+        y: 122
+        width: 16
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -364,12 +328,12 @@ TextureImporter:
       name: MEOWTAR_THE_BLUE_Jump_11
       rect:
         serializedVersion: 2
-        x: 6
-        y: 26
-        width: 16
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7
+        y: 86
+        width: 15
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -386,11 +350,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 7
-        y: 0
-        width: 15
+        y: 52
+        width: 17
         height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -398,6 +362,48 @@ TextureImporter:
       bones: []
       spriteID: d535b7f6663d10a70800000000000000
       internalID: 8791540384514397021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MEOWTAR_THE_BLUE_Jump_13
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 26
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c70512776de4da0800000000000000
+      internalID: -5958589449816212473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MEOWTAR_THE_BLUE_Jump_14
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 15
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3f8d8edb4d6ba10800000000000000
+      internalID: 1924959802867905468
       vertices: []
       indices: 
       edges: []
