@@ -1,40 +1,7 @@
 fileFormatVersion: 2
-guid: c045ea40b0b2bbf478e7754a44cbfeca
+guid: fceaa8f46e46dc342b99ed2ffc24af94
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: 7594912141048409494
-    second: MEOWTAR_THE_BLUE_Run_0
-  - first:
-      213: 6877951988288322825
-    second: MEOWTAR_THE_BLUE_Run_1
-  - first:
-      213: 7052145725571717496
-    second: MEOWTAR_THE_BLUE_Run_2
-  - first:
-      213: -866192811607131651
-    second: MEOWTAR_THE_BLUE_Run_3
-  - first:
-      213: 1341471583064365530
-    second: MEOWTAR_THE_BLUE_Run_4
-  - first:
-      213: 7877253511362470949
-    second: MEOWTAR_THE_BLUE_Run_5
-  - first:
-      213: -1029113784485066743
-    second: MEOWTAR_THE_BLUE_Run_6
-  - first:
-      213: -8001195612307390866
-    second: MEOWTAR_THE_BLUE_Run_7
-  - first:
-      213: 4007694107680977770
-    second: MEOWTAR_THE_BLUE_Run_8
-  - first:
-      213: 5534619304156137869
-    second: MEOWTAR_THE_BLUE_Run_10
-  - first:
-      213: -7934953608820229514
-    second: MEOWTAR_THE_BLUE_Run_11
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -136,160 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Run_0
+      name: MEOWTAR_THE_BLUE_Jump_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 340
-        width: 20
+        y: 488
+        width: 15
         height: 16
-      alignment: 9
-      pivot: {x: 0.41437918, y: -0.040136337}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 69ded7b4a5c866960800000000000000
-      internalID: 7594912141048409494
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Run_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 299
-        width: 22
-        height: 17
-      alignment: 9
-      pivot: {x: 0.37351492, y: -0.025184182}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 90dfd1474e4637f50800000000000000
-      internalID: 6877951988288322825
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Run_2
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 256
-        width: 23
-        height: 17
-      alignment: 9
-      pivot: {x: 0.6137365, y: -0.0102574965}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 879ddfc6c214ed160800000000000000
-      internalID: 7052145725571717496
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Run_3
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 231
-        width: 23
-        height: 15
-      alignment: 9
-      pivot: {x: 0.5834068, y: 0.0000010172527}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: df9f8252a3aaaf3f0800000000000000
-      internalID: -866192811607131651
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Run_4
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 188
-        width: 23
-        height: 17
-      alignment: 9
-      pivot: {x: 0.5984756, y: 0.00000089757583}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad915d02c4ddd9210800000000000000
-      internalID: 1341471583064365530
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Run_5
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 148
-        width: 23
-        height: 15
-      alignment: 9
-      pivot: {x: 0.5984756, y: -0.018873088}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52465764550a15d60800000000000000
-      internalID: 7877253511362470949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Run_6
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 105
-        width: 23
-        height: 17
-      alignment: 9
-      pivot: {x: 0.5984756, y: -0.016653173}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9084f4a277ad7b1f0800000000000000
-      internalID: -1029113784485066743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Run_7
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 78
-        width: 25
-        height: 15
       alignment: 9
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,60 +117,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6ef0069bfa06f090800000000000000
-      internalID: -8001195612307390866
+      spriteID: b10cd2574b5b11ae0800000000000000
+      internalID: -1580282207565660133
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Run_8
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 52
-        width: 23
-        height: 16
-      alignment: 9
-      pivot: {x: 0.38878018, y: -0.01453495}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a6330c8ae803e9730800000000000000
-      internalID: 4007694107680977770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Run_10
-      rect:
-        serializedVersion: 2
-        x: 1
-        y: 26
-        width: 23
-        height: 16
-      alignment: 9
-      pivot: {x: 0.40900233, y: -0.014534831}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d890f37feeaeecc40800000000000000
-      internalID: 5534619304156137869
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MEOWTAR_THE_BLUE_Run_11
+      name: MEOWTAR_THE_BLUE_Jump_1
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 462
         width: 16
         height: 16
       alignment: 9
@@ -360,8 +138,239 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67af015ebb161e190800000000000000
-      internalID: -7934953608820229514
+      spriteID: 31460c91fce5dc9a0800000000000000
+      internalID: -6211204067490765805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MEOWTAR_THE_BLUE_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 420
+        width: 22
+        height: 21
+      alignment: 9
+      pivot: {x: 0.65647584, y: 0.016393753}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69145d64d1cd67f60800000000000000
+      internalID: 8031849003762401686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MEOWTAR_THE_BLUE_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 362
+        width: 32
+        height: 34
+      alignment: 9
+      pivot: {x: 0.6905507, y: -0.00000089757583}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0880c5e9951ce2b40800000000000000
+      internalID: 5417479992426367104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MEOWTAR_THE_BLUE_Jump_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 311
+        width: 14
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61e0f17a3c52e0f40800000000000000
+      internalID: 5696532100922936854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MEOWTAR_THE_BLUE_Jump_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 258
+        width: 14
+        height: 25
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2afc6af48681ca100800000000000000
+      internalID: 120498126324158370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MEOWTAR_THE_BLUE_Jump_8
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 208
+        width: 16
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87ecbfc699f829730800000000000000
+      internalID: 4004420907807002232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MEOWTAR_THE_BLUE_Jump_9
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 171
+        width: 17
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a1f67c9b428f1170800000000000000
+      internalID: 8151377111823085988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MEOWTAR_THE_BLUE_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 122
+        width: 16
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba882a8980e8b2ee0800000000000000
+      internalID: -1284777101112473429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MEOWTAR_THE_BLUE_Jump_11
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 86
+        width: 15
+        height: 22
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5981300c2d5ed80800000000000000
+      internalID: -8221933822567475728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MEOWTAR_THE_BLUE_Jump_12
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 52
+        width: 17
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d535b7f6663d10a70800000000000000
+      internalID: 8791540384514397021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MEOWTAR_THE_BLUE_Jump_13
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 26
+        width: 16
+        height: 15
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c70512776de4da0800000000000000
+      internalID: -5958589449816212473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MEOWTAR_THE_BLUE_Jump_14
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 0
+        width: 15
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3f8d8edb4d6ba10800000000000000
+      internalID: 1924959802867905468
       vertices: []
       indices: 
       edges: []
