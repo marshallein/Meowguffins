@@ -13,6 +13,7 @@ public class MoveController : MonoBehaviour
     public Transform feetPos;
     public float checkRadius;
     public LayerMask whatIsGround;
+    public Animator animator;
 
     public float jumpTime;
     private float jumpTimeCounter;
@@ -27,7 +28,6 @@ public class MoveController : MonoBehaviour
     {
         moveInput = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
-
     }
 
     private void Update()
@@ -36,24 +36,31 @@ public class MoveController : MonoBehaviour
 
         if (moveInput > 0)
         {
+            animator.SetFloat("Speed", 1);
             transform.eulerAngles = new Vector3(0, 0, 0);
         }
         else if (moveInput < 0)
         {
+            animator.SetFloat("Speed", 1);
             transform.eulerAngles = new Vector3(0, 180, 0);
         }
-
+        else if (moveInput == 0)
+        {
+            animator.SetFloat("Speed", 0);
+        }
         if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow))
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
+            animator.SetBool("isJumping", true);
         }
         if (Input.GetKey(KeyCode.UpArrow) && isJumping == true)
         {
             if (jumpTimeCounter > 0)
             {
                 rb.velocity = Vector2.up * jumpForce;
+                animator.SetBool("isJumping", true);
                 jumpTimeCounter -= Time.deltaTime;
             }
             else
@@ -64,6 +71,7 @@ public class MoveController : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.UpArrow))
         {
             isJumping = false;
+            animator.SetBool("isJumping", false);
         }
 
     }
