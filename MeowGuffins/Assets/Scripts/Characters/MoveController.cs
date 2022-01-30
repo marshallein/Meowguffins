@@ -19,6 +19,16 @@ public class MoveController : MonoBehaviour
     private float jumpTimeCounter;
     private bool isJumping;
 
+    bool isTouchingFront;
+    public Transform frontCheck;
+    bool wallSliding;
+    public float wallSlidingSpeed;
+
+    bool wallJumping;
+    public float xWallForce;
+    public float yWallForce;
+    public float wallJumpTime;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,6 +43,32 @@ public class MoveController : MonoBehaviour
     private void Update()
     {
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+
+        isTouchingFront = Physics2D.OverlapCircle(frontCheck.position, checkRadius, whatIsGround);
+
+        if (isTouchingFront && !isGrounded && moveInput != 0)
+        {
+            wallSliding = true;
+        }
+        else
+        {
+            wallSliding = false;
+        }
+
+        if (wallSliding)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
+        }
+        if (Input.GetKeyDown(KeyCode.UpArrow) && wallSliding)
+        {
+            wallJumping = true;
+            Invoke("SetWallJumpingToFalse", wallJumpTime);
+        }
+        if (wallJumping)
+        {
+            rb.velocity = new Vector2(xWallForce * -moveInput, yWallForce);
+        }
+
 
         if (moveInput > 0)
         {
@@ -74,5 +110,9 @@ public class MoveController : MonoBehaviour
             animator.SetBool("isJumping", false);
         }
 
+    }
+    void SetWallJumpingToFalse()
+    {
+        wallJumping = false;
     }
 }
