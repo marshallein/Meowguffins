@@ -59,7 +59,7 @@ public class MoveController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, Mathf.Clamp(rb.velocity.y, -wallSlidingSpeed, float.MaxValue));
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && wallSliding)
+        if (Input.GetKeyDown(KeyCode.Space) && wallSliding)
         {
             wallJumping = true;
             Invoke("SetWallJumpingToFalse", wallJumpTime);
@@ -84,14 +84,14 @@ public class MoveController : MonoBehaviour
         {
             animator.SetFloat("Speed", 0);
         }
-        if (isGrounded && Input.GetKeyDown(KeyCode.UpArrow))
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
             animator.SetBool("isJumping", true);
         }
-        if (Input.GetKey(KeyCode.UpArrow) && isJumping == true)
+        if (Input.GetKey(KeyCode.Space) && isJumping == true)
         {
             if (jumpTimeCounter > 0)
             {
@@ -104,7 +104,7 @@ public class MoveController : MonoBehaviour
                 isJumping = false;
             }
         }
-        if (Input.GetKeyUp(KeyCode.UpArrow))
+        if (Input.GetKeyUp(KeyCode.Space))
         {
             isJumping = false;
             animator.SetBool("isJumping", false);
