@@ -111,7 +111,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5962316200219062668}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.51, y: 0.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6013576062994462315}
@@ -327,10 +327,10 @@ MonoBehaviour:
   animator: {fileID: 6013576062994462295}
   jumpTime: 0.35
   frontCheck: {fileID: 6882286559971418232}
-  wallSlidingSpeed: 0
-  xWallForce: 0
-  yWallForce: 0
-  wallJumpTime: 0
+  wallSlidingSpeed: 2
+  xWallForce: 15
+  yWallForce: 15
+  wallJumpTime: 0.05
 --- !u!58 &2446005462718911995
 CircleCollider2D:
   m_ObjectHideFlags: 0
