@@ -69,10 +69,8 @@ GameObject:
   - component: {fileID: 4899952956943313764}
   - component: {fileID: 4899952956943313785}
   - component: {fileID: 4899952956943313786}
-  - component: {fileID: 4899952956943313784}
   - component: {fileID: 6749945911799071039}
   - component: {fileID: 1405798522721567657}
-  - component: {fileID: 6802663863954788664}
   m_Layer: 0
   m_Name: Meow_Knight
   m_TagString: Untagged
@@ -195,32 +193,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5551486, y: 0.66214967}
   m_EdgeRadius: 0
---- !u!114 &4899952956943313784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4899952956943313765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a2197e61879de2448090f9887b528e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 6
-  jumpForce: 10
-  feetPos: {fileID: 4899952957433539091}
-  checkRadius: 0.3
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 64
-  animator: {fileID: 1405798522721567657}
-  jumpTime: 0.35
-  frontCheck: {fileID: 9133092623616815178}
-  wallSlidingSpeed: 10
-  xWallForce: 0
-  yWallForce: 0
-  wallJumpTime: 0
 --- !u!58 &6749945911799071039
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -256,19 +228,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6802663863954788664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4899952956943313765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edd90bcc2784a74fb65d0bfdbde8db1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 1405798522721567657}
 --- !u!1 &4899952957433539100
 GameObject:
   m_ObjectHideFlags: 0
