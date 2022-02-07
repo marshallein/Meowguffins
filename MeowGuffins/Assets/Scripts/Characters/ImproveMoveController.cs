@@ -69,12 +69,12 @@ public class ImproveMoveController : MonoBehaviour
         if (m_isFacingRight)
         {
             wallCheckHit = Physics2D.Raycast(transform.position, new Vector2(wallDistance, 0), wallDistance, groundCheckLayer);
-            //Debug.DrawRay(transform.position, new Vector2(wallDistance, 0), Color.blue);
+            Debug.DrawRay(transform.position, new Vector2(wallDistance, 0), Color.blue);
         }
         else
         {
             wallCheckHit = Physics2D.Raycast(transform.position, new Vector2(-wallDistance, 0), wallDistance, groundCheckLayer);
-            //Debug.DrawRay(transform.position, new Vector2(-wallDistance, 0), Color.blue);
+            Debug.DrawRay(transform.position, new Vector2(-wallDistance, 0), Color.blue);
 
         }
 
@@ -115,14 +115,17 @@ public class ImproveMoveController : MonoBehaviour
 
     public void OnCharacterJump(InputAction.CallbackContext context)
     {
-        if (context.performed && OnCharacterisGrounded() || m_isWallSliding)
+        if (context.performed)
         {
-            if (m_isWallSliding)
+            if (m_isWallSliding && horizontal != 0)
             {
-                rigidbody.AddForce(new Vector2(500 * -horizontal, 0));
+                rigidbody.AddForce(new Vector2(1500 * -horizontal, 0));
+                rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump_force);
             }
-            rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump_force);
-
+            else if(OnCharacterisGrounded())
+            {
+                rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump_force);
+            }
         }
         if (context.canceled && rigidbody.velocity.y > 0f)
         {
