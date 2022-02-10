@@ -52,7 +52,7 @@ public class ImproveMoveController : MonoBehaviour
         {
             animator.SetFloat("Speed", 10);
         }
-        else
+        else if (horizontal == 0)
         {
             animator.SetFloat("Speed", 0);
         }
