@@ -50,7 +50,7 @@ public class ImproveMoveController : MonoBehaviour
         rigidbody.velocity = new Vector2(horizontal * move_speed, rigidbody.velocity.y);
         if (horizontal != 0)
         {
-            animator.SetFloat("Speed", 1);
+            animator.SetFloat("Speed", 10);
         }
         else
         {
