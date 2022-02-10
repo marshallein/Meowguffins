@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4899952956943313765, guid: e6e614a52942068419de894edccb18b3, type: 3}
       propertyPath: m_Name
-      value: Meow_Knight
+      value: Meow_Knight Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4899952956943313785, guid: e6e614a52942068419de894edccb18b3, type: 3}
       propertyPath: m_Interpolate
@@ -21,11 +21,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4899952956943313787, guid: e6e614a52942068419de894edccb18b3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7872454
+      value: -3.88
       objectReference: {fileID: 0}
     - target: {fileID: 4899952956943313787, guid: e6e614a52942068419de894edccb18b3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3936002
+      value: -3.02
       objectReference: {fileID: 0}
     - target: {fileID: 4899952956943313787, guid: e6e614a52942068419de894edccb18b3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -198,7 +198,7 @@ MonoBehaviour:
     m_ActionId: a4ba6fa7-fee7-4904-ab33-ad8a19bba7f9
     m_ActionName: Player/Jump[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
+  m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
