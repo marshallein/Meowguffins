@@ -10,7 +10,7 @@ public class ImproveMoveController : MonoBehaviour
     private Rigidbody2D rigidbody;
     [SerializeField]
     private Transform m_groundCheck;
-    private bool m_isFacingRight = true;
+    public static bool m_isFacingRight = true;
     private float horizontal;
     private Animator animator;
     private bool m_isWallSliding = false;
