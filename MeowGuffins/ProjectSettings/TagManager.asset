@@ -40,6 +40,24 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1649316583
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 895457751
+    locked: 0
+  - name: NPC
+    uniqueID: 818623043
+    locked: 0
+  - name: Entity
+    uniqueID: 2498888331
+    locked: 0
+  - name: Foreground
+    uniqueID: 443546789
+    locked: 0
+  - name: Leaf
+    uniqueID: 3378192969
     locked: 0
