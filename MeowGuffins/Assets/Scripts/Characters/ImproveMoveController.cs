@@ -22,7 +22,7 @@ public class ImproveMoveController : MonoBehaviour
 
     public float wallJumpTime = 0.02f;
     public float wallSlideSpeed = 0.06f;
-    public float wallDistance = 0.27f;
+    public float wallDistance = 0.25f;
 
     RaycastHit2D wallCheckHit;
     float jumpTime;
@@ -97,7 +97,7 @@ public class ImproveMoveController : MonoBehaviour
 
     private bool OnCharacterisGrounded()
     {
-        return Physics2D.OverlapCircle(m_groundCheck.position, 0.2f, groundCheckLayer);
+        return Physics2D.OverlapCircle(m_groundCheck.position, 0.5f, groundCheckLayer);
     }
 
     private void OnCharacterFlip()
