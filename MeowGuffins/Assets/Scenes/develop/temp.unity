@@ -353,7 +353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6013576062994462289, guid: aae005e083ce7cf47a84af6601d8a324, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6013576062994462294, guid: aae005e083ce7cf47a84af6601d8a324, type: 3}
       propertyPath: m_Size.x
@@ -905,6 +905,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2020373806652009808, guid: 7de62dc6bf3bead4484661e11243a576, type: 3}
+      propertyPath: wallDistance
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 3577876666018241750, guid: 7de62dc6bf3bead4484661e11243a576, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 17
@@ -1031,7 +1035,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5856187806765107421, guid: 7de62dc6bf3bead4484661e11243a576, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7de62dc6bf3bead4484661e11243a576, type: 3}

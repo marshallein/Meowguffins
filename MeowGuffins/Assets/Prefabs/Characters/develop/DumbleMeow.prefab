@@ -310,7 +310,7 @@ MonoBehaviour:
   jump_force: 20
   wallJumpTime: 0.2
   wallSlideSpeed: 0.06
-  wallDistance: 0.27
+  wallDistance: 0.6
 --- !u!114 &6239176583283936923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,6 +424,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 73ec37d8-d648-4105-b6bf-f827d0ddde5c
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c70725f9-980f-4317-9490-bbcec8b51cc4
+    m_ActionName: Player/Attack4[/Keyboard/s]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
