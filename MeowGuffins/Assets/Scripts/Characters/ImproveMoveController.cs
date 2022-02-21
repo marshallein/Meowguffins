@@ -9,11 +9,11 @@ public class ImproveMoveController : MonoBehaviour
     #region Private variables
     private Rigidbody2D rigidbody;
     [SerializeField]
-    private Transform m_groundCheck;
+    public Transform m_groundCheck;
     public static bool m_isFacingRight = true;
     private float horizontal;
     private Animator animator;
-    private bool m_isWallSliding = false;
+    public bool m_isWallSliding = false;
     #endregion
 
     public LayerMask groundCheckLayer;
@@ -97,7 +97,7 @@ public class ImproveMoveController : MonoBehaviour
 
     private bool OnCharacterisGrounded()
     {
-        return Physics2D.OverlapCircle(m_groundCheck.position, 0.5f, groundCheckLayer);
+        return Physics2D.OverlapCircle(m_groundCheck.position, 0.1f, groundCheckLayer);
     }
 
     private void OnCharacterFlip()
