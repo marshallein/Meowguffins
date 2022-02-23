@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 3577876666018241750}
   m_Layer: 0
   m_Name: King_meowthur
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -61,11 +61,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5856187806765107421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.05, y: -3.94, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5856187805083453335}
   - {fileID: 5149737098439671611}
+  - {fileID: 6763514891493164102}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -106,8 +107,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1796078965
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -6405229381304896869, guid: 11eba3cc9f4f1b24f8e10ffb3dc42e7c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -139,7 +140,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &5856187806765107422
 BoxCollider2D:
@@ -154,7 +155,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.005651742, y: 0.61269116}
+  m_Offset: {x: -0.009562463, y: 0.61269116}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5402031, y: 0}
@@ -165,7 +166,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.56624526, y: 0.6496177}
+  m_Size: {x: 0.54278094, y: 0.6496177}
   m_EdgeRadius: 0
 --- !u!95 &5856187806765107420
 Animator:
@@ -214,12 +215,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895d7f0fdc6616a44ba7d41fff0fb61d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_groundCheck: {fileID: 5856187805083453335}
+  m_isWallSliding: 0
   groundCheckLayer:
     serializedVersion: 2
     m_Bits: 64
   move_speed: 7
-  jump_force: 17
+  jump_force: 23
+  groundCheck: {fileID: 5856187805083453335}
+  frontCheck: {fileID: 6763514891493164102}
   wallJumpTime: 0.02
   wallSlideSpeed: 0.06
   wallDistance: 0.27
@@ -372,6 +375,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 632209c1-d74e-4f62-b1f5-75cb614f082c
     m_ActionName: Player/Special_Attack[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c70725f9-980f-4317-9490-bbcec8b51cc4
+    m_ActionName: Player/Attack4[/Keyboard/s]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -434,3 +441,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.13582584, y: 0.114221334}
   m_EdgeRadius: 0
+--- !u!1 &7738210344863384536
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6763514891493164102}
+  m_Layer: 0
+  m_Name: front
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6763514891493164102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7738210344863384536}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.324, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5856187806765107411}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

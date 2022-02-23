@@ -57,6 +57,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1134491, y: 0.094176054}
   m_EdgeRadius: 0
+--- !u!1 &1155707919260355635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5580510769331206198}
+  m_Layer: 0
+  m_Name: front
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5580510769331206198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155707919260355635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.281, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4899952956943313787}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4899952956943313765
 GameObject:
   m_ObjectHideFlags: 0
@@ -76,7 +106,7 @@ GameObject:
   - component: {fileID: 4224457436395786365}
   m_Layer: 0
   m_Name: Meow_Knight
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,11 +119,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4899952956943313765}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.5, y: -3.85, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4899952957433539091}
   - {fileID: 7036604762494807303}
+  - {fileID: 5580510769331206198}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -134,8 +165,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1796078965
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 6244167583305193946, guid: dd1580deb934fba4daf0e57b67a4180c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -167,7 +198,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &4899952956943313786
 BoxCollider2D:
@@ -182,7 +213,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02349019, y: 0.54392517}
+  m_Offset: {x: -0.025312543, y: 0.56943816}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.61718464, y: 0}
@@ -193,7 +224,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5551486, y: 0.66214967}
+  m_Size: {x: 0.5551486, y: 0.6111237}
   m_EdgeRadius: 0
 --- !u!58 &6749945911799071039
 CircleCollider2D:
@@ -242,12 +273,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895d7f0fdc6616a44ba7d41fff0fb61d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_groundCheck: {fileID: 4899952957433539091}
+  m_isWallSliding: 0
   groundCheckLayer:
     serializedVersion: 2
     m_Bits: 64
   move_speed: 8
-  jump_force: 20
+  jump_force: 25
+  groundCheck: {fileID: 4899952957433539091}
+  frontCheck: {fileID: 5580510769331206198}
   wallJumpTime: 0.2
   wallSlideSpeed: 0.06
   wallDistance: 0.27

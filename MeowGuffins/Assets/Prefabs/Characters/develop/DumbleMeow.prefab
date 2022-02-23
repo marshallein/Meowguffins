@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &936563194088446448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8683716460566759318}
+  m_Layer: 0
+  m_Name: front
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8683716460566759318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 936563194088446448}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.37, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6013576062994462315}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2938833880999429210
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +165,7 @@ GameObject:
   - component: {fileID: 6239176583283936923}
   m_Layer: 0
   m_Name: DumbleMeow
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,12 +178,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6013576062994462289}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3235526, y: -3.96, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6013576062900080484}
   - {fileID: 695783701753341222}
   - {fileID: 3460894457692692759}
+  - {fileID: 8683716460566759318}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -194,8 +225,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1796078965
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 4746033552134490201, guid: 8e784c0eac9230245ad60d637f34c902, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -227,7 +258,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &6013576062994462294
 BoxCollider2D:
@@ -242,7 +273,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.121964574, y: 0.61961913}
+  m_Offset: {x: 0.07486766, y: 0.61961913}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -253,7 +284,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5528424, y: 0.76076174}
+  m_Size: {x: 0.5423764, y: 0.76076174}
   m_EdgeRadius: 0
 --- !u!95 &6013576062994462295
 Animator:
@@ -302,15 +333,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895d7f0fdc6616a44ba7d41fff0fb61d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_groundCheck: {fileID: 6013576062900080484}
+  m_isWallSliding: 0
   groundCheckLayer:
     serializedVersion: 2
     m_Bits: 64
-  move_speed: 7
-  jump_force: 20
+  move_speed: 8
+  jump_force: 25
+  groundCheck: {fileID: 6013576062900080484}
+  frontCheck: {fileID: 8683716460566759318}
   wallJumpTime: 0.2
   wallSlideSpeed: 0.06
-  wallDistance: 0.27
+  wallDistance: 0.45
 --- !u!114 &6239176583283936923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,6 +457,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 73ec37d8-d648-4105-b6bf-f827d0ddde5c
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c70725f9-980f-4317-9490-bbcec8b51cc4
+    m_ActionName: Player/Attack4[/Keyboard/s]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
