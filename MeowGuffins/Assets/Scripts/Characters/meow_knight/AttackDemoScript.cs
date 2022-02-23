@@ -10,6 +10,7 @@ public class AttackDemoScript : MonoBehaviour
     Rigidbody2D rb;
     float nextAttackTime = 0f;
     float attackRate = 2f;
+    private float damage = 30f;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,9 +49,17 @@ public class AttackDemoScript : MonoBehaviour
     {
         attack_timmer("attack_set3");
     }
-
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Hit " + collision.name);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.GetComponentInChildren<HealthBar>().hp -= damage;
+            if (collision.GetComponentInChildren<HealthBar>().hp <= 0f)
+            {
+                Destroy(collision.gameObject);
+            }
+
+        }
     }
 }

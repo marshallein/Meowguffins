@@ -17,7 +17,7 @@ public class ArrowScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Wall")
+        if(collision.gameObject.tag == "Enemy" )
         {
             collision.GetComponentInChildren<HealthBar>().hp -= damage;
             if (collision.GetComponentInChildren<HealthBar>().hp <= 0f)

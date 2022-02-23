@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
+    private float damage = 15f;
     // Start is called before the first frame update
     void Start()
     {
@@ -12,9 +13,13 @@ public class FireBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Wall")
+        if (collision.gameObject.tag == "Enemy")
         {
-            Debug.Log(collision.name);
+            collision.GetComponentInChildren<HealthBar>().hp -= damage;
+            if (collision.GetComponentInChildren<HealthBar>().hp <= 0f)
+            {
+                collision.gameObject.SetActive(false);
+            }
             Destroy(gameObject);
         }
     }

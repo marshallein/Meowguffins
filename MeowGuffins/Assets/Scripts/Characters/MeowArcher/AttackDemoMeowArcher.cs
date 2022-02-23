@@ -15,6 +15,7 @@ public class AttackDemoMeowArcher : MonoBehaviour
     float nextAttackTime = 0f;
     float attackRate = 2f;
     public float arrowForce = 15f;
+    private float damage = 30f;
     // Start is called before the first frame update
     void Start()
     {
@@ -89,7 +90,18 @@ public class AttackDemoMeowArcher : MonoBehaviour
     {
         attack_timmer("attack_set4");
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.GetComponentInChildren<HealthBar>().hp -= damage; 
+            if (collision.GetComponentInChildren<HealthBar>().hp <= 0f)
+            {
+                Destroy(collision.gameObject);
+            }
+            
+        }
+    }
     // Update is called once per frame
     void Update()
     {

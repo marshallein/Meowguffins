@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeowArcherBehaviour : MonoBehaviour
+public class AllMeowBehavior : MonoBehaviour
 {
     private Animator animator;
     float nextAnimTime = 0f;
@@ -16,7 +16,7 @@ public class MeowArcherBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void takeDamage()
@@ -30,6 +30,7 @@ public class MeowArcherBehaviour : MonoBehaviour
 
     public void onDeath()
     {
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
+        Destroy(this.gameObject);
     }
 }
