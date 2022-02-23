@@ -9,7 +9,6 @@ public class ImproveMoveController : MonoBehaviour
     #region Private variables
     private Rigidbody2D rigidbody;
     [SerializeField]
-    public Transform m_groundCheck;
     public static bool m_isFacingRight = true;
     private float horizontal;
     private Animator animator;
@@ -19,6 +18,8 @@ public class ImproveMoveController : MonoBehaviour
     public LayerMask groundCheckLayer;
     public float move_speed;
     public float jump_force;
+    public Transform groundCheck;
+    public Transform frontCheck;
 
     public float wallJumpTime = 0.02f;
     public float wallSlideSpeed = 0.06f;
@@ -68,13 +69,13 @@ public class ImproveMoveController : MonoBehaviour
 
         if (m_isFacingRight)
         {
-            wallCheckHit = Physics2D.Raycast(transform.position, new Vector2(wallDistance, 0), wallDistance, groundCheckLayer);
-            Debug.DrawRay(transform.position, new Vector2(wallDistance, 0), Color.blue);
+            wallCheckHit = Physics2D.Raycast(frontCheck.position, new Vector2(wallDistance, 0), wallDistance, groundCheckLayer);
+            Debug.DrawRay(frontCheck.position, new Vector2(wallDistance, 0), Color.blue);
         }
         else
         {
-            wallCheckHit = Physics2D.Raycast(transform.position, new Vector2(-wallDistance, 0), wallDistance, groundCheckLayer);
-            Debug.DrawRay(transform.position, new Vector2(-wallDistance, 0), Color.blue);
+            wallCheckHit = Physics2D.Raycast(frontCheck.position, new Vector2(-wallDistance, 0), wallDistance, groundCheckLayer);
+            Debug.DrawRay(frontCheck.position, new Vector2(-wallDistance, 0), Color.blue);
 
         }
 
@@ -97,7 +98,8 @@ public class ImproveMoveController : MonoBehaviour
 
     private bool OnCharacterisGrounded()
     {
-        return Physics2D.OverlapCircle(m_groundCheck.position, 0.1f, groundCheckLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.15f, groundCheckLayer);
+
     }
 
     private void OnCharacterFlip()
@@ -131,5 +133,10 @@ public class ImproveMoveController : MonoBehaviour
         {
             rigidbody.velocity = new Vector2(rigidbody.velocity.x, rigidbody.velocity.y * 0.5f);
         }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(groundCheck.position, 0.15f);
     }
 }

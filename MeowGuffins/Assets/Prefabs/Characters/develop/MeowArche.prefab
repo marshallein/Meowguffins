@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: -2612780772905861094}
   m_Layer: 0
   m_Name: MeowArche
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,6 +155,7 @@ Transform:
   - {fileID: 6403015580861704808}
   - {fileID: 5079541799066472946}
   - {fileID: 9194174418317819445}
+  - {fileID: 268488383037314080}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -195,8 +196,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1796078965
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 2475929708402795311, guid: f42bf83fc33ce3547ac4e140d15ae83c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -228,7 +229,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &6403015582176541537
 BoxCollider2D:
@@ -243,7 +244,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.063875794, y: 0.5996952}
+  m_Offset: {x: 0.012421489, y: 0.6242162}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -254,7 +255,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.632272, y: 0.6756096}
+  m_Size: {x: 0.6138785, y: 0.6265676}
   m_EdgeRadius: 0
 --- !u!95 &6403015582176541538
 Animator:
@@ -288,9 +289,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.057488203, y: 0.3250296}
+  m_Offset: {x: 0.012734532, y: 0.30854136}
   serializedVersion: 2
-  m_Radius: 0.33141732
+  m_Radius: 0.3078624
 --- !u!114 &6959574719052942101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,12 +304,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895d7f0fdc6616a44ba7d41fff0fb61d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_groundCheck: {fileID: 6403015580861704808}
+  m_isWallSliding: 0
   groundCheckLayer:
     serializedVersion: 2
     m_Bits: 64
-  move_speed: 8
-  jump_force: 21
+  move_speed: 9
+  jump_force: 27
+  groundCheck: {fileID: 6403015580861704808}
+  frontCheck: {fileID: 268488383037314080}
   wallJumpTime: 0.2
   wallSlideSpeed: 0.06
   wallDistance: 0.4
@@ -498,3 +501,33 @@ MonoBehaviour:
   arrow: {fileID: 4936806468654745455, guid: b0b4e1a6d93dbc441864311d18cfd875, type: 3}
   electricArrow: {fileID: 7015379503495770858, guid: 93aacc4f72390cb4eb62b33ddf1fd83a, type: 3}
   arrowForce: 15
+--- !u!1 &8054135963239756634
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 268488383037314080}
+  m_Layer: 0
+  m_Name: front
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &268488383037314080
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8054135963239756634}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.306, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6403015582176541470}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
