@@ -8,6 +8,7 @@ public class ArrowScript : MonoBehaviour
     public float speed = 2f;
     public Rigidbody2D rb;
     int count = 0;
+    private float damage = 20f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,11 @@ public class ArrowScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "Wall")
         {
-            Debug.Log(collision.name);
+            collision.GetComponentInChildren<HealthBar>().hp -= damage;
+            if (collision.GetComponentInChildren<HealthBar>().hp <= 0f)
+            {
+                collision.gameObject.SetActive(false);
+            }
             Destroy(gameObject);
         }
     }
