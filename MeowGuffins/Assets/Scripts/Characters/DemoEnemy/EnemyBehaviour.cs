@@ -25,6 +25,10 @@ public class EnemyBehaviour : MonoBehaviour
 
     void Update()
     {
+        if (target == null)
+        {
+            target = GameObject.Find("transform1").transform;
+        }
         if (Vector2.Distance(checkPoint.position, target.position) <= attackRange)
         {
             check = true;
@@ -34,6 +38,7 @@ public class EnemyBehaviour : MonoBehaviour
             Patrol();
             check = false;
         }
+
     }
 
     private void Shoot()

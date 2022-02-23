@@ -9,7 +9,7 @@ public class HealthBar : MonoBehaviour
     public Image hpEffectImage;
     public float hp;
     [SerializeField]
-    private float maxHp;
+    public float maxHp;
     [SerializeField]
     private float hurtSpeed = 0.005f;
     // Start is called before the first frame update

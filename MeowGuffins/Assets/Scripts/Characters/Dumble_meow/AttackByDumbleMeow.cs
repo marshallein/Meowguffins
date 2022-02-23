@@ -14,7 +14,7 @@ public class AttackByDumbleMeow : MonoBehaviour
     private float attackTime = 0f;
     private bool checkDirection;
     // Start is called before the first frame update
-  
+    private float damage = 25f;
     private void AttackTimer(string trigger)
     {
         if (Time.time >= attackTime)
@@ -38,6 +38,17 @@ public class AttackByDumbleMeow : MonoBehaviour
     public void onCharacterHealing(InputAction.CallbackContext context)
     {
         AttackTimer("healing");
+        
+        if (gameObject.GetComponentInChildren<HealthBar>().hp <= gameObject.GetComponentInChildren<HealthBar>().maxHp-15f)
+        {
+            gameObject.GetComponentInChildren<HealthBar>().hp += 15f/3;
+        }
+        else
+        {
+            gameObject.GetComponentInChildren<HealthBar>().hp = gameObject.GetComponentInChildren<HealthBar>().maxHp;
+        }
+
+
     }
     public void onCharacterAttack1(InputAction.CallbackContext context)
     {
@@ -58,6 +69,18 @@ public class AttackByDumbleMeow : MonoBehaviour
         }
         
 
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.GetComponentInChildren<HealthBar>().hp -= damage;
+            if (collision.GetComponentInChildren<HealthBar>().hp <= 0f)
+            {
+                Destroy(collision.gameObject);
+            }
+
+        }
     }
     // Update is called once per frame
     void Update()

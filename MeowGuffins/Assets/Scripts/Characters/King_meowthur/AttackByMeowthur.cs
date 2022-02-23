@@ -9,6 +9,7 @@ public class AttackByMeowthur : MonoBehaviour
     Rigidbody rb;
     float nextAttackTime = 0f;
     float attackRate = 2f;
+    private float damage = 25f;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +53,14 @@ public class AttackByMeowthur : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print("Hit " + collision.name);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            collision.GetComponentInChildren<HealthBar>().hp -= damage;
+            if (collision.GetComponentInChildren<HealthBar>().hp <= 0f)
+            {
+                Destroy(collision.gameObject);
+            }
+
+        }
     }
 }
