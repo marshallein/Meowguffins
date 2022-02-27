@@ -1,0 +1,312 @@
+fileFormatVersion: 2
+guid: 29e12f1389c2d0043b4e4e80285b8a3e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6449085980054532404
+    second: Purple Portal Idle_0
+  - first:
+      213: -4566927475906858290
+    second: Purple Portal Idle_1
+  - first:
+      213: 6498229228042817685
+    second: Purple Portal Idle_2
+  - first:
+      213: -8039704127279199519
+    second: Purple Portal Idle_3
+  - first:
+      213: 4045873208209163475
+    second: Purple Portal Idle_4
+  - first:
+      213: -7563517696218739460
+    second: Purple Portal Idle_5
+  - first:
+      213: -6754098614883717478
+    second: Purple Portal Idle_6
+  - first:
+      213: -7413981025904740975
+    second: Purple Portal Idle_7
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 10
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Purple Portal Idle_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 12
+        width: 29
+        height: 43
+      alignment: 9
+      pivot: {x: 0.6821156, y: 0.010394761}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4313a17b781cf7950800000000000000
+      internalID: 6449085980054532404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple Portal Idle_1
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 12
+        width: 19
+        height: 41
+      alignment: 9
+      pivot: {x: 0.45424008, y: 0.013374305}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec2b99348a30f90c0800000000000000
+      internalID: -4566927475906858290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple Portal Idle_2
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 12
+        width: 25
+        height: 43
+      alignment: 9
+      pivot: {x: 0.3841406, y: 0.008383995}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5909d86cd095e2a50800000000000000
+      internalID: 6498229228042817685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple Portal Idle_3
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 12
+        width: 30
+        height: 41
+      alignment: 9
+      pivot: {x: 0.456633, y: 0.011713772}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea084241bb3d6090800000000000000
+      internalID: -8039704127279199519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple Portal Idle_4
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 12
+        width: 25
+        height: 42
+      alignment: 9
+      pivot: {x: 0.50327635, y: 0.013087069}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4c3953f34d52830800000000000000
+      internalID: 4045873208209163475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple Portal Idle_5
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 9
+        width: 28
+        height: 44
+      alignment: 9
+      pivot: {x: 0.66174096, y: 0.077251546}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc40808abcf80790800000000000000
+      internalID: -7563517696218739460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple Portal Idle_6
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 12
+        width: 17
+        height: 40
+      alignment: 9
+      pivot: {x: 0.5637548, y: 0.016390633}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ee5e1381f9442a0800000000000000
+      internalID: -6754098614883717478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Purple Portal Idle_7
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 12
+        width: 19
+        height: 41
+      alignment: 9
+      pivot: {x: 0.66963756, y: 0.014698517}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1953673b98f3c1990800000000000000
+      internalID: -7413981025904740975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

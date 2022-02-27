@@ -47,11 +47,12 @@ public class AttackDemoMeowArcher : MonoBehaviour
                 Rigidbody2D arrowRb = arrowSpawn.GetComponent<Rigidbody2D>();
                 if (checkDirection)
                 {
-                    arrowRb.velocity = arrowSpawn.transform.right * 10;
+                    arrowRb.velocity = arrowSpawn.transform.right * arrowForce;
                 }
                 else
                 {
-                    arrowRb.velocity = arrowSpawn.transform.right * -10;
+                    arrowSpawn.transform.rotation = new Quaternion(0, -180, 0, 0);
+                    arrowRb.velocity = arrowSpawn.transform.right * arrowForce;
                 }
             }
             else
@@ -60,11 +61,12 @@ public class AttackDemoMeowArcher : MonoBehaviour
                 Rigidbody2D arrowRb = arrowSpawn.GetComponent<Rigidbody2D>();
                 if (checkDirection)
                 {
-                    arrowRb.velocity = arrowSpawn.transform.right * 10;
+                    arrowRb.velocity = arrowSpawn.transform.right * arrowForce;
                 }
                 else
                 {
-                    arrowRb.velocity = arrowSpawn.transform.right * -10;
+                    arrowSpawn.transform.rotation = new Quaternion(0, -180, 0, 0);
+                    arrowRb.velocity = arrowSpawn.transform.right * arrowForce;
                 }
             }
             nextAttackTime = Time.time + 1f / attackRate;
