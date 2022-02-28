@@ -24,18 +24,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Attack1",
+                    "name": "Jump",
                     "type": "Button",
-                    "id": "5b6bb55b-e80f-4c3d-95bf-64e508475010",
+                    "id": "a4ba6fa7-fee7-4904-ab33-ad8a19bba7f9",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Jump",
+                    "name": "Attack1",
                     "type": "Button",
-                    "id": "a4ba6fa7-fee7-4904-ab33-ad8a19bba7f9",
+                    "id": "5b6bb55b-e80f-4c3d-95bf-64e508475010",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -51,15 +51,6 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Special_Attack",
-                    "type": "Button",
-                    "id": "632209c1-d74e-4f62-b1f5-75cb614f082c",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Attack4",
                     "type": "Button",
                     "id": "c70725f9-980f-4317-9490-bbcec8b51cc4",
@@ -69,9 +60,27 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Special_Attack",
+                    "type": "Button",
+                    "id": "632209c1-d74e-4f62-b1f5-75cb614f082c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "92f0d086-83d3-406a-b85c-7dc92604d2a7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Dodge",
+                    "type": "Button",
+                    "id": "04a3d81a-1004-44cf-b968-f3d228d382d3",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -246,6 +255,61 @@
                 },
                 {
                     "name": "",
+                    "id": "a5ab5177-6704-4fec-bd3c-43cb1f07843b",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "67599864-a4ee-4070-b42a-a28641aa905f",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Attack2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5a6d3492-a7c8-4834-ba11-735270c7df08",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2b1ff987-9032-4ea5-a5e4-9c332cb6c6a1",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c25d6f0b-895d-4c04-b085-9a5baec352ef",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Special_Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "143bb1cd-cc10-4eca-a2f0-a3664166fe91",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
@@ -301,56 +365,12 @@
                 },
                 {
                     "name": "",
-                    "id": "a5ab5177-6704-4fec-bd3c-43cb1f07843b",
-                    "path": "<Keyboard>/space",
+                    "id": "dd908f41-009c-47fd-9ede-b122e01123dd",
+                    "path": "<Keyboard>/shift",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "67599864-a4ee-4070-b42a-a28641aa905f",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Attack2",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "c25d6f0b-895d-4c04-b085-9a5baec352ef",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Special_Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "2b1ff987-9032-4ea5-a5e4-9c332cb6c6a1",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Attack4",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5a6d3492-a7c8-4834-ba11-735270c7df08",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Interact",
+                    "action": "Dodge",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
