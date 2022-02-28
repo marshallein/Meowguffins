@@ -17,7 +17,7 @@ public class OpacityControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             Debug.Log("player enter the leaf");
             m_tileMap.color = new Color(1f, 1f, 1f, 0.4f);
@@ -26,6 +26,11 @@ public class OpacityControl : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        m_tileMap.color = new Color(1f, 1f, 1f, 1f);
+
+        if (collision.gameObject.tag == "Player")
+        {
+            m_tileMap.color = new Color(1f, 1f, 1f, 1f);
+        }
+
     }
 }
