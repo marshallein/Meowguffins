@@ -19,12 +19,9 @@ public class ArrowScript : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy" )
         {
-            collision.GetComponentInChildren<HealthBar>().hp -= damage;
-            if (collision.GetComponentInChildren<HealthBar>().hp <= 0f)
-            {
-                collision.gameObject.SetActive(false);
-            }
-            Destroy(gameObject);
+            var enemy = collision.GetComponentInChildren<EnemyBehaviour>();
+            enemy.TakeDamage(damage);
+            
         }
     }
 

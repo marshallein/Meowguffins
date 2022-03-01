@@ -274,9 +274,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hpImage: {fileID: 552577266085947941}
   hpEffectImage: {fileID: 552577267845421827}
-  hp: 0
-  maxHp: 200
   hurtSpeed: 0.005
+  entity: {fileID: 552577266737028598}
 --- !u!1 &552577266620560136
 GameObject:
   m_ObjectHideFlags: 0

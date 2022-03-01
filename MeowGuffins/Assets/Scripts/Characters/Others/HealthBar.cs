@@ -7,21 +7,17 @@ public class HealthBar : MonoBehaviour
 {
     public Image hpImage;
     public Image hpEffectImage;
-    public float hp;
-    [SerializeField]
-    public float maxHp;
     [SerializeField]
     private float hurtSpeed = 0.005f;
-    // Start is called before the first frame update
-    void Start()
-    {
-        hp = maxHp;
-    }
+
+    [SerializeField]
+    private BaseEntity entity;
 
     // Update is called once per frame
     void Update()
     {
-        hpImage.fillAmount = hp / maxHp;
+        var maxHealth = entity is BaseMeow ? (entity as BaseMeow).MeowObject.Health : 100f;
+        hpImage.fillAmount = entity.Health / maxHealth;
 
         if(hpEffectImage.fillAmount > hpImage.fillAmount)
         {

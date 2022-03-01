@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyBehaviour : MonoBehaviour
+public class EnemyBehaviour : BaseEntity
 {
     public Transform wayPoint1, wayPoint2;
     private Transform wayPointTarget;
@@ -20,8 +20,8 @@ public class EnemyBehaviour : MonoBehaviour
         sp = GetComponent<SpriteRenderer>();
         wayPointTarget = wayPoint1;
         InvokeRepeating("Shoot", 1, 1);
+        health = 100f; // TODO: move this into ScriptableEnemy
     }
-
 
     void Update()
     {
