@@ -4879,9 +4879,8 @@ GameObject:
   - component: {fileID: 8216449439294133703}
   - component: {fileID: 1026778383297352837}
   - component: {fileID: 1361425386257105357}
-  - component: {fileID: 2541132946628159177}
-  - component: {fileID: 2541132946628159222}
   - component: {fileID: 916943006181814087}
+  - component: {fileID: -7847274207320220378}
   m_Layer: 0
   m_Name: King_meowthur
   m_TagString: Player
@@ -5231,18 +5230,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &-7847274207320220378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8216449439294133702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3268ea8f5ba32241aac748b2a20e09f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &916943006181814087
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5257,6 +5244,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   maxHp: 130
+--- !u!114 &-7847274207320220378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8216449439294133702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3268ea8f5ba32241aac748b2a20e09f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheck: {fileID: 8216449441102142092}
+  frontCheck: {fileID: 9124079567255050589}
+  meowObject: {fileID: 11400000, guid: 0d2780dc403564143b765599ffc5206e, type: 2}
+  groundCheckLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &8216449441102142095
 GameObject:
   m_ObjectHideFlags: 0

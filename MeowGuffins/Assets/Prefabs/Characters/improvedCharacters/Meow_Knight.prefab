@@ -4849,9 +4849,8 @@ GameObject:
   - component: {fileID: 2448963287170049972}
   - component: {fileID: 8057697742728373538}
   - component: {fileID: 5854197597940536255}
-  - component: {fileID: 5111759854683092726}
-  - component: {fileID: 8957896231316271941}
   - component: {fileID: 3439635465157171005}
+  - component: {fileID: 7948820604072537041}
   m_Layer: 0
   m_Name: Meow_Knight
   m_TagString: Player
@@ -5189,18 +5188,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &7948820604072537041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4058014199335816686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0135084616bcd834fb6f2c34f4e8664f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3439635465157171005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5215,6 +5202,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hp: 0
   maxHp: 130
+--- !u!114 &7948820604072537041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4058014199335816686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0135084616bcd834fb6f2c34f4e8664f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheck: {fileID: 4058014198744960152}
+  frontCheck: {fileID: 3540150173338853053}
+  meowObject: {fileID: 11400000, guid: 58f8159f1cd5a144aaf72ad1f65a80d9, type: 2}
+  groundCheckLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &7807325389344385720
 GameObject:
   m_ObjectHideFlags: 0

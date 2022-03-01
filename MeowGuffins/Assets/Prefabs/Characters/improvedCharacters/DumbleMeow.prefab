@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 440766163842172120}
   - component: {fileID: 2011659454011887563}
   - component: {fileID: 7717734257528073370}
+  - component: {fileID: -1936416194657971404}
   m_Layer: 0
   m_Name: DumbleMeow
   m_TagString: Player
@@ -416,6 +417,20 @@ MonoBehaviour:
   dodgeTime: 0.2
   teleportDistance: 3
   dodgeCooldown: 5
+--- !u!114 &7717734257528073370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288067541221489682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dacb6a09cc651914d881dd10b6ab055f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  maxHp: 130
 --- !u!114 &-1936416194657971404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,23 +449,9 @@ MonoBehaviour:
   groundCheckLayer:
     serializedVersion: 2
     m_Bits: 64
-  dodgeTime: 0.2
-  teleportDistance: 3
-  dodgeCooldown: 5
---- !u!114 &7717734257528073370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288067541221489682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dacb6a09cc651914d881dd10b6ab055f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 0
-  maxHp: 130
+  attack_point: {fileID: 6957068953221081940}
+  fireball: {fileID: 4847183391850138466, guid: 109b3a7051dd0064f8506f0bd958e071, type: 3}
+  fireballForce: 10
 --- !u!1 &5803988140176515840
 GameObject:
   m_ObjectHideFlags: 0
