@@ -16,7 +16,7 @@ TagManager:
   - UI
   - Ground
   - Wall
-  - 
+  - UI
   - 
   - 
   - 
@@ -61,4 +61,7 @@ TagManager:
     locked: 0
   - name: Leaf
     uniqueID: 3378192969
+    locked: 0
+  - name: UI
+    uniqueID: 786396893
     locked: 0

@@ -6,7 +6,7 @@ using CodeMonkey;
 public class Bullet : MonoBehaviour
 {
     private Animator animator;
-    public float damage = 10;
+    public float damage = 1;
     private float test;
     bool isDeath = false;
     // Start is called before the first frame update
@@ -27,8 +27,8 @@ public class Bullet : MonoBehaviour
             animator.SetTrigger("take_damage");
             //CMDebug.TextPopupMouse(damage.ToString(),collision.gameObject.transform.position);
             collision.GetComponent<AllMeowBehavior>().takeDamage();
-            collision.GetComponentInChildren<HealthBar>().hp -= damage;
-            if(collision.GetComponentInChildren<HealthBar>().hp <= 0f)
+            collision.GetComponent<HealthManager>().hp -= damage;
+            if(collision.GetComponentInChildren<HealthManager>().hp <= 0f)
             {
                 animator.SetBool("isDeath2", true);
             }
