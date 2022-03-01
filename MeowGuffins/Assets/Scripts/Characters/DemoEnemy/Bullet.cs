@@ -26,9 +26,8 @@ public class Bullet : MonoBehaviour
             animator = collision.gameObject.GetComponent<Animator>();
             animator.SetTrigger("take_damage");
             //CMDebug.TextPopupMouse(damage.ToString(),collision.gameObject.transform.position);
-            collision.GetComponent<AllMeowBehavior>().takeDamage();
-            collision.GetComponent<HealthManager>().hp -= damage;
-            if(collision.GetComponentInChildren<HealthManager>().hp <= 0f)
+            collision.GetComponent<BaseMeow>().TakeDamage(damage);
+            if(collision.GetComponentInChildren<BaseMeow>().Health <= 0f)
             {
                 animator.SetBool("isDeath2", true);
             }

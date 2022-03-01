@@ -248,6 +248,59 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5803988140176515841, guid: e31ac71706126c64eb91e2fba0217bb5, type: 3}
   m_PrefabInstance: {fileID: 5803988140335137928}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &741306274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 741306276}
+  - component: {fileID: 741306275}
+  m_Layer: 0
+  m_Name: MeowObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &741306275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741306274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67fa6c10dda3f8e459ec0cbe0e6591b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnManagerValues:
+  - {fileID: 11400000, guid: 58f8159f1cd5a144aaf72ad1f65a80d9, type: 2}
+  - {fileID: 11400000, guid: 0d2780dc403564143b765599ffc5206e, type: 2}
+  - {fileID: 11400000, guid: dd1e965b22246094fa74e46bfbdd3a24, type: 2}
+  - {fileID: 11400000, guid: 72b2acc849a40844e8904c85a9ff0fd1, type: 2}
+  spawnPoints:
+  - {x: 1, y: 1, z: 1}
+  - {x: 2, y: 1, z: 1}
+  NumberOfMeow: 2
+  moveSpeed: 0
+--- !u!4 &741306276
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741306274}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5, y: 0.9, z: -7.9850736}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &921735488
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,14 +795,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4560499037268078667, guid: 07f46b00a0bdabd43a0ab8dcd30c9d13, type: 3}
-      propertyPath: dodgeCooldown
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4560499037268078667, guid: 07f46b00a0bdabd43a0ab8dcd30c9d13, type: 3}
-      propertyPath: dodgeDistance
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 8216449439294133702, guid: 07f46b00a0bdabd43a0ab8dcd30c9d13, type: 3}
       propertyPath: m_Name
       value: King_meowthur
@@ -1041,7 +1086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 288067541221489682, guid: e31ac71706126c64eb91e2fba0217bb5, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 288067541221489704, guid: e31ac71706126c64eb91e2fba0217bb5, type: 3}
       propertyPath: m_RootOrder

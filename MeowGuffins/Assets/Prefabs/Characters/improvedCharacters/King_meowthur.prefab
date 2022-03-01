@@ -4878,7 +4878,6 @@ GameObject:
   - component: {fileID: 8216449439294133701}
   - component: {fileID: 8216449439294133703}
   - component: {fileID: 1026778383297352837}
-  - component: {fileID: 4560499037268078667}
   - component: {fileID: 1361425386257105357}
   - component: {fileID: 2541132946628159177}
   - component: {fileID: 2541132946628159222}
@@ -5042,33 +5041,6 @@ CircleCollider2D:
   m_Offset: {x: -0.008714378, y: 0.27580726}
   serializedVersion: 2
   m_Radius: 0.272745
---- !u!114 &4560499037268078667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8216449439294133702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 895d7f0fdc6616a44ba7d41fff0fb61d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidbody: {fileID: 0}
-  groundCheckLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  move_speed: 7
-  jump_force: 23
-  groundCheck: {fileID: 8216449441102142092}
-  frontCheck: {fileID: 9124079567255050589}
-  wallJumpTime: 0.02
-  wallSlideSpeed: 0.06
-  wallDistance: 0.7
-  Dust: {fileID: 1182368712711268232}
-  dodgeTime: 0.2
-  dodgeDistance: 18
-  dodgeCooldown: 2
 --- !u!114 &1361425386257105357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5096,8 +5068,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4560499037268078667}
-        m_TargetAssemblyTypeName: ImproveMoveController, Assembly-CSharp
+      - m_Target: {fileID: -7847274207320220378}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
         m_MethodName: OnReadCharacterMove
         m_Mode: 0
         m_Arguments:
@@ -5116,8 +5088,8 @@ MonoBehaviour:
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2541132946628159177}
-        m_TargetAssemblyTypeName: AttackByMeowthur, Assembly-CSharp
+      - m_Target: {fileID: -7847274207320220378}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
         m_MethodName: OnCharacterAttack
         m_Mode: 0
         m_Arguments:
@@ -5132,8 +5104,8 @@ MonoBehaviour:
     m_ActionName: Player/Attack[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4560499037268078667}
-        m_TargetAssemblyTypeName: ImproveMoveController, Assembly-CSharp
+      - m_Target: {fileID: -7847274207320220378}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
         m_MethodName: OnCharacterJump
         m_Mode: 0
         m_Arguments:
@@ -5188,8 +5160,8 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2541132946628159177}
-        m_TargetAssemblyTypeName: AttackByMeowthur, Assembly-CSharp
+      - m_Target: {fileID: -7847274207320220378}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
         m_MethodName: OnCharacterAttack2
         m_Mode: 0
         m_Arguments:
@@ -5204,8 +5176,8 @@ MonoBehaviour:
     m_ActionName: Player/Attack2[/Mouse/rightButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2541132946628159177}
-        m_TargetAssemblyTypeName: AttackByMeowthur, Assembly-CSharp
+      - m_Target: {fileID: -7847274207320220378}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
         m_MethodName: OnCharacterAttack3
         m_Mode: 0
         m_Arguments:
@@ -5220,8 +5192,8 @@ MonoBehaviour:
     m_ActionName: Player/Special_Attack[/Keyboard/q]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2541132946628159177}
-        m_TargetAssemblyTypeName: AttackByMeowthur, Assembly-CSharp
+      - m_Target: {fileID: -7847274207320220378}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
         m_MethodName: OnCharacterAttack4
         m_Mode: 0
         m_Arguments:
@@ -5240,8 +5212,8 @@ MonoBehaviour:
     m_ActionName: Player/Interact[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4560499037268078667}
-        m_TargetAssemblyTypeName: ImproveMoveController, Assembly-CSharp
+      - m_Target: {fileID: -7847274207320220378}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
         m_MethodName: OnCharacterDodge
         m_Mode: 0
         m_Arguments:
@@ -5259,7 +5231,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &2541132946628159177
+--- !u!114 &-7847274207320220378
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5268,19 +5240,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8216449439294133702}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8941e3198ac3eec44a9a99776ef2bda1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2541132946628159222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8216449439294133702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ca36adf5c092ac469352dd4d3921137, type: 3}
+  m_Script: {fileID: 11500000, guid: a3268ea8f5ba32241aac748b2a20e09f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &916943006181814087

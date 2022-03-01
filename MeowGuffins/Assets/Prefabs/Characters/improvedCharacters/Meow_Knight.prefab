@@ -4848,7 +4848,6 @@ GameObject:
   - component: {fileID: 4058014199335816689}
   - component: {fileID: 2448963287170049972}
   - component: {fileID: 8057697742728373538}
-  - component: {fileID: 6643364417248591799}
   - component: {fileID: 5854197597940536255}
   - component: {fileID: 5111759854683092726}
   - component: {fileID: 8957896231316271941}
@@ -5012,33 +5011,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &6643364417248591799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4058014199335816686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 895d7f0fdc6616a44ba7d41fff0fb61d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidbody: {fileID: 0}
-  groundCheckLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  move_speed: 8
-  jump_force: 25
-  groundCheck: {fileID: 4058014198744960152}
-  frontCheck: {fileID: 3540150173338853053}
-  wallJumpTime: 0.2
-  wallSlideSpeed: 0.06
-  wallDistance: 0.27
-  Dust: {fileID: 9217362961902060626}
-  dodgeTime: 0.2
-  dodgeDistance: 20
-  dodgeCooldown: 3
 --- !u!114 &5854197597940536255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5066,8 +5038,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6643364417248591799}
-        m_TargetAssemblyTypeName: ImproveMoveController, Assembly-CSharp
+      - m_Target: {fileID: 7948820604072537041}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
         m_MethodName: OnReadCharacterMove
         m_Mode: 0
         m_Arguments:
@@ -5086,8 +5058,8 @@ MonoBehaviour:
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5111759854683092726}
-        m_TargetAssemblyTypeName: AttackDemoScript, Assembly-CSharp
+      - m_Target: {fileID: 7948820604072537041}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
         m_MethodName: OnCharacterAttack
         m_Mode: 0
         m_Arguments:
@@ -5102,8 +5074,8 @@ MonoBehaviour:
     m_ActionName: Player/Attack[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6643364417248591799}
-        m_TargetAssemblyTypeName: ImproveMoveController, Assembly-CSharp
+      - m_Target: {fileID: 7948820604072537041}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
         m_MethodName: OnCharacterJump
         m_Mode: 0
         m_Arguments:
@@ -5158,9 +5130,9 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5111759854683092726}
-        m_TargetAssemblyTypeName: AttackDemoScript, Assembly-CSharp
-        m_MethodName: OnCharacterAttack3
+      - m_Target: {fileID: 7948820604072537041}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
+        m_MethodName: OnCharacterAttack2
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5173,14 +5145,10 @@ MonoBehaviour:
     m_ActionId: fe1df484-b452-45b6-b89a-1418bacc0c13
     m_ActionName: Player/Attack2[/Mouse/rightButton]
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 632209c1-d74e-4f62-b1f5-75cb614f082c
-    m_ActionName: Player/Special_Attack[/Keyboard/q]
-  - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5111759854683092726}
-        m_TargetAssemblyTypeName: AttackDemoScript, Assembly-CSharp
-        m_MethodName: OnCharacterAttack2
+      - m_Target: {fileID: 7948820604072537041}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
+        m_MethodName: OnCharacterAttack3
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5190,6 +5158,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+    m_ActionId: 632209c1-d74e-4f62-b1f5-75cb614f082c
+    m_ActionName: Player/Special_Attack[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
     m_ActionId: c70725f9-980f-4317-9490-bbcec8b51cc4
     m_ActionName: Player/Attack4[/Keyboard/s]
   - m_PersistentCalls:
@@ -5198,8 +5170,8 @@ MonoBehaviour:
     m_ActionName: Player/Interact[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6643364417248591799}
-        m_TargetAssemblyTypeName: ImproveMoveController, Assembly-CSharp
+      - m_Target: {fileID: 7948820604072537041}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
         m_MethodName: OnCharacterDodge
         m_Mode: 0
         m_Arguments:
@@ -5217,7 +5189,7 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &5111759854683092726
+--- !u!114 &7948820604072537041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5226,19 +5198,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4058014199335816686}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9edd90bcc2784a74fb65d0bfdbde8db1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8957896231316271941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4058014199335816686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ca36adf5c092ac469352dd4d3921137, type: 3}
+  m_Script: {fileID: 11500000, guid: 0135084616bcd834fb6f2c34f4e8664f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &3439635465157171005

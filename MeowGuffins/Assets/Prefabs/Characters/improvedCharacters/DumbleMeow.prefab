@@ -44,10 +44,7 @@ GameObject:
   - component: {fileID: 288067541221489685}
   - component: {fileID: 288067541221489684}
   - component: {fileID: 8176880458123354040}
-  - component: {fileID: 5786658510028974882}
   - component: {fileID: 440766163842172120}
-  - component: {fileID: 5803988138939172114}
-  - component: {fileID: 5803988138939172115}
   - component: {fileID: 2011659454011887563}
   - component: {fileID: 7717734257528073370}
   m_Layer: 0
@@ -210,33 +207,6 @@ CircleCollider2D:
   m_Offset: {x: 0.07505518, y: 0.27014363}
   serializedVersion: 2
   m_Radius: 0.2701434
---- !u!114 &5786658510028974882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288067541221489682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 895d7f0fdc6616a44ba7d41fff0fb61d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidbody: {fileID: 0}
-  groundCheckLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  move_speed: 8
-  jump_force: 25
-  groundCheck: {fileID: 288067541118715175}
-  frontCheck: {fileID: 2884883674066275797}
-  wallJumpTime: 0.2
-  wallSlideSpeed: 0.06
-  wallDistance: 0.8
-  Dust: {fileID: 7601381561990443275}
-  dodgeTime: 0.2
-  dodgeDistance: 20
-  dodgeCooldown: 4
 --- !u!114 &440766163842172120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,8 +234,8 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5786658510028974882}
-        m_TargetAssemblyTypeName: ImproveMoveController, Assembly-CSharp
+      - m_Target: {fileID: -1936416194657971404}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
         m_MethodName: OnReadCharacterMove
         m_Mode: 0
         m_Arguments:
@@ -284,9 +254,9 @@ MonoBehaviour:
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5803988138939172114}
-        m_TargetAssemblyTypeName: AttackByDumbleMeow, Assembly-CSharp
-        m_MethodName: onCharacterAttack1
+      - m_Target: {fileID: -1936416194657971404}
+        m_TargetAssemblyTypeName: DumbleMeow, Assembly-CSharp
+        m_MethodName: OnCharacterAttack
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -300,8 +270,8 @@ MonoBehaviour:
     m_ActionName: Player/Attack1[/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5786658510028974882}
-        m_TargetAssemblyTypeName: ImproveMoveController, Assembly-CSharp
+      - m_Target: {fileID: -1936416194657971404}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
         m_MethodName: OnCharacterJump
         m_Mode: 0
         m_Arguments:
@@ -316,9 +286,9 @@ MonoBehaviour:
     m_ActionName: Player/Jump[/Keyboard/space]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5803988138939172114}
-        m_TargetAssemblyTypeName: AttackByDumbleMeow, Assembly-CSharp
-        m_MethodName: onCharacterAttack2
+      - m_Target: {fileID: -1936416194657971404}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
+        m_MethodName: OnCharacterAttack2
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -332,9 +302,9 @@ MonoBehaviour:
     m_ActionName: Player/Attack2[/Mouse/rightButton]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5803988138939172114}
-        m_TargetAssemblyTypeName: AttackByDumbleMeow, Assembly-CSharp
-        m_MethodName: onCharacterHealing
+      - m_Target: {fileID: -1936416194657971404}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
+        m_MethodName: OnCharacterAttack3
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -388,9 +358,9 @@ MonoBehaviour:
     m_ActionName: UI/TrackedDeviceOrientation
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5803988138939172114}
-        m_TargetAssemblyTypeName: AttackByDumbleMeow, Assembly-CSharp
-        m_MethodName: onCharacterAttack3
+      - m_Target: {fileID: -1936416194657971404}
+        m_TargetAssemblyTypeName: DumbleMeow, Assembly-CSharp
+        m_MethodName: OnCharacterAttack4
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -427,33 +397,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &5803988138939172114
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288067541221489682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f04f519bd400aff40873e624ed1db339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attack_point: {fileID: 6957068953221081940}
-  fireball: {fileID: 4847183391850138466, guid: 109b3a7051dd0064f8506f0bd958e071, type: 3}
-  fireballForce: 10
---- !u!114 &5803988138939172115
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288067541221489682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ca36adf5c092ac469352dd4d3921137, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2011659454011887563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -468,6 +411,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frontCheck: {fileID: 2884883674066275797}
   groundMask:
+    serializedVersion: 2
+    m_Bits: 64
+  dodgeTime: 0.2
+  teleportDistance: 3
+  dodgeCooldown: 5
+--- !u!114 &-1936416194657971404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288067541221489682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29066d0452712a74d85fb6407e17236a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheck: {fileID: 288067541118715175}
+  frontCheck: {fileID: 2884883674066275797}
+  meowObject: {fileID: 11400000, guid: 72b2acc849a40844e8904c85a9ff0fd1, type: 2}
+  groundCheckLayer:
     serializedVersion: 2
     m_Bits: 64
   dodgeTime: 0.2
