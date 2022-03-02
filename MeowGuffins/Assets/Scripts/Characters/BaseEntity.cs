@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BaseEntity : MonoBehaviour
+public abstract class BaseEntity : MonoBehaviour
 {
     protected Animator animator;
     float nextAnimTime = 0f;

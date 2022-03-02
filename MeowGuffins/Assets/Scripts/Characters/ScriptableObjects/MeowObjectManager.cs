@@ -12,12 +12,7 @@ public class MeowObjectManager : MonoBehaviour
     public int moveSpeed;
     private void Start()
     {
-        SetProperties();
-        SpawnEntities();
-        
-    }
-    void SetProperties()
-    {
+        SpawnEntities();      
     }
     void SpawnEntities()
     {
@@ -28,16 +23,6 @@ public class MeowObjectManager : MonoBehaviour
             currentEntity.name = spawnManagerValues[i].prefabName;
             currentSpawnPointIndex = (currentSpawnPointIndex + 1) % NumberOfMeow; 
             currentEntity.SetActive(true);
-          
-            
-        }       
-        
-    }
-    private void Update()
-    {
-        if (Input.GetKey(KeyCode.X))
-        {
-
-        }
+        }            
     }
 }
