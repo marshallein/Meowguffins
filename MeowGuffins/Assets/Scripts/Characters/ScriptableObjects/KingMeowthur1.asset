@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabName: KingMeowthur1
   prefab: {fileID: 8216449439294133702, guid: 07f46b00a0bdabd43a0ab8dcd30c9d13, type: 3}
+  menuSprite: {fileID: -6405229381304896869, guid: 11eba3cc9f4f1b24f8e10ffb3dc42e7c, type: 3}
   moveSpeed: 7
   jumpForce: 25
   wallJumpTime: 0.02

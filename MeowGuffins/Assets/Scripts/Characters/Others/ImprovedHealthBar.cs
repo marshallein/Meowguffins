@@ -7,21 +7,15 @@ public class ImprovedHealthBar : MonoBehaviour
 {
     public Image hpImage;
     public Image hpEffectImage;
-    private float hp; 
-    private float maxHp;
-    private GameObject inActiveGameObjects;
+    private BaseMeow inactiveMeow;
     private string currentMeowName;
-    private GameObject currentGameOject;
+    private BaseMeow currentMeow;
     private float hurtSpeed = 0.005f;
-    private GameObject temp;
     void Start()
     {
-        inActiveGameObjects = FindInActiveObjectByTag("Player");
-        currentGameOject = GameObject.FindGameObjectWithTag("Player");
-        currentMeowName = currentGameOject.name;
-        maxHp = currentGameOject.GetComponent<HealthManager>().maxHp;
-        hp = maxHp;
-        temp = new GameObject();
+        inactiveMeow = FindInActiveObjectByTag("Player").GetComponent<BaseMeow>();
+        currentMeow = GameObject.FindGameObjectWithTag("Player").GetComponent<BaseMeow>();
+        currentMeowName = currentMeow.name;
     }
 
     GameObject FindInActiveObjectByTag(string tag)
@@ -34,7 +28,7 @@ public class ImprovedHealthBar : MonoBehaviour
             {
                 if (objs[i].CompareTag(tag))
                 {
-                    if(objs[i].gameObject.name != currentMeowName)
+                    if (objs[i].gameObject.name != currentMeowName)
                     {
                         return objs[i].gameObject;
                     }
@@ -49,14 +43,15 @@ public class ImprovedHealthBar : MonoBehaviour
     [System.Obsolete]
     void Update()
     {
-        if (!currentGameOject.active)
+        if (!currentMeow.enabled)
         {
-            temp = currentGameOject;
-            currentGameOject = inActiveGameObjects;
-            inActiveGameObjects = temp;
-        } 
-        maxHp = currentGameOject.GetComponent<HealthManager>().maxHp;
-        hp = currentGameOject.GetComponent<HealthManager>().hp;
+            var temp = currentMeow;
+            currentMeow = inactiveMeow;
+            inactiveMeow = temp;
+        }
+        var active = MeowObjectManager.Instance.ActiveMeow;
+        var maxHp = active.MeowObject.Health;
+        var hp = active.Health;
 
         hpImage.fillAmount = hp / maxHp;
 

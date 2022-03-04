@@ -2,12 +2,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "New Meow", menuName = "MeowObject")]
 public class MeowObject : ScriptableObject
 {
     public string prefabName;
     public GameObject prefab;
+    public Sprite menuSprite;
 
     [SerializeField]
     private float moveSpeed = 7f;
@@ -43,9 +45,5 @@ public class MeowObject : ScriptableObject
     [SerializeField]
     private float health = 120f;
     public float Health => health;
-
-
-
-
 
 }

@@ -77,11 +77,13 @@ public abstract class BaseMeow : BaseEntity
 
     public virtual void OnCharacterAttack(InputAction.CallbackContext context)
     {
+        print("attack 1 ran");
         attack_timmer("attack_set");
     }
 
     public virtual void OnCharacterAttack2(InputAction.CallbackContext context)
     {
+        print("attack 2 ran");
         attack_timmer("attack_set2");
     }
 

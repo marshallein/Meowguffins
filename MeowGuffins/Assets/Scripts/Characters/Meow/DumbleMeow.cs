@@ -13,10 +13,15 @@ public class DumbleMeow : BaseMeow
 
     public override void OnCharacterAttack(InputAction.CallbackContext context)
     {
-        var checkDirection = IsFacingRight;
-        if (Time.time >= nextAttackTime)
+        fireball_timmer("attack_set");
+    }
+
+    private void fireball_timmer(string trigger)
+    {
+        if(Time.time >= nextAttackTime)
         {
-            attack_timmer("attack_set");
+            var checkDirection = IsFacingRight;
+            animator.SetTrigger(trigger);
             GameObject fireballSpawn = Instantiate(fireball, attack_point.position, attack_point.rotation);
             Rigidbody2D fbRB = fireballSpawn.GetComponent<Rigidbody2D>();
             if (checkDirection)
@@ -25,9 +30,10 @@ public class DumbleMeow : BaseMeow
             }
             else
             {
-                fbRB.velocity = fireballSpawn.transform.right * -fireballForce;
+                fireballSpawn.transform.rotation = new Quaternion(0, -180, 0, 0);
+                fbRB.velocity = fireballSpawn.transform.right * fireballForce;
             }
-            nextAttackTime = Time.time + 1f / nextAttackTime;
+            nextAttackTime = Time.time + 1f / MeowObject.AttackRate;
         }
     }
 

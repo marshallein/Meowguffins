@@ -16,6 +16,7 @@ MonoBehaviour:
   prefab: {fileID: 288067541221489682, guid: e31ac71706126c64eb91e2fba0217bb5, type: 3}
   moveSpeed: 8
   jumpForce: 26
+  menuSprite: {fileID: 4746033552134490201, guid: 8e784c0eac9230245ad60d637f34c902, type: 3}
   wallJumpTime: 0.02
   wallSlideSpeed: 0.06
   wallDistance: 0.7

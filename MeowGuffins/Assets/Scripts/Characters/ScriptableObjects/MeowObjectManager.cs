@@ -1,28 +1,72 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 using UnityEngine;
 
 public class MeowObjectManager : MonoBehaviour
 {
-    //public GameObject[] entityToSpawn;
-    public MeowObject[] spawnManagerValues;
-    public Vector3[] spawnPoints;
-    public int NumberOfMeow = 2;
-    public int moveSpeed;
-    private void Start()
+    public Transform spawnPoint;
+    [SerializeField]
+    private List<MeowObject> defaultMeow;
+
+    private Queue<BaseMeow> activeMeows;
+    public Queue<BaseMeow> ActiveMeows { get => activeMeows; }
+
+    public BaseMeow ActiveMeow { get => activeMeows.First(); }
+
+    public CinemachineVirtualCamera virtualCamera;
+
+    private static MeowObjectManager _instance;
+    public static MeowObjectManager Instance { get => _instance; }
+
+    private void Awake()
     {
-        SpawnEntities();      
+        _instance = this;
+        activeMeows = new Queue<BaseMeow>();
+
+        List<MeowObject> selection;
+        if (SelectionScript.SelectedCards == null)
+        {
+            selection = defaultMeow;
+        } else
+        {
+            selection = SelectionScript.SelectedCards.Select(c => c.Meow).ToList();
+        }
+        foreach (var meow in selection)
+        {
+            var spawned = Instantiate(meow.prefab, spawnPoint.position, Quaternion.identity);
+            spawned.name = meow.prefabName;
+            spawned.SetActive(activeMeows.Count == 0);
+
+            activeMeows.Enqueue(spawned.GetComponent<BaseMeow>());
+        }
+
+        // Set camera to follow the currently active meow
+        UpdateCameraFollowing();
     }
-    void SpawnEntities()
+
+    public void Switch()
     {
-        int currentSpawnPointIndex = 0;
-        for (int i = 0; i < NumberOfMeow; i++)
-        {        
-            GameObject currentEntity = Instantiate(spawnManagerValues[i].prefab, spawnPoints[currentSpawnPointIndex], Quaternion.identity);
-            currentEntity.name = spawnManagerValues[i].prefabName;
-            currentSpawnPointIndex = (currentSpawnPointIndex + 1) % NumberOfMeow; 
-            currentEntity.SetActive(true);
-        }            
+        var oldActiveMeow = activeMeows.Dequeue();
+        // Deactivate the popped meow
+        oldActiveMeow.gameObject.SetActive(false);
+        // Place to the bottom of the queue
+        activeMeows.Enqueue(oldActiveMeow);
+        var newlyActivatedMeow = ActiveMeow;
+        // Set position
+        newlyActivatedMeow.transform.position = oldActiveMeow.transform.position;
+        // Activate the newly activated meow
+        newlyActivatedMeow.gameObject.SetActive(true);
+        // Make the camera the new active meow
+        UpdateCameraFollowing();
+    }
+
+    public void UpdateCameraFollowing()
+    {
+        virtualCamera.m_Follow = ActiveMeow.transform;
     }
 }
+
+
