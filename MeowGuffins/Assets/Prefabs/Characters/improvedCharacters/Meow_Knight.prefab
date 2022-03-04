@@ -4851,7 +4851,7 @@ GameObject:
   - component: {fileID: 5854197597940536255}
   - component: {fileID: 3439635465157171005}
   - component: {fileID: 7948820604072537041}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Meow_Knight
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -5290,6 +5290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2159438186270362508}
   - component: {fileID: 4357167639343295170}
+  - component: {fileID: 7999081529014619489}
   m_Layer: 0
   m_Name: attack_hitbox
   m_TagString: Untagged
@@ -5318,7 +5319,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9074605594181032114}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -5337,3 +5338,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1134491, y: 0.094176054}
   m_EdgeRadius: 0
+--- !u!114 &7999081529014619489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9074605594181032114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e99addf3cd4064e8dea4212079f5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

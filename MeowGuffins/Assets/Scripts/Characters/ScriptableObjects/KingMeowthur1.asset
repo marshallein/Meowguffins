@@ -15,10 +15,13 @@ MonoBehaviour:
   prefabName: KingMeowthur1
   prefab: {fileID: 8216449439294133702, guid: 07f46b00a0bdabd43a0ab8dcd30c9d13, type: 3}
   moveSpeed: 7
-  jumpForce: 23
+  jumpForce: 25
   wallJumpTime: 0.02
   wallSlideSpeed: 0.06
   wallDistance: 0.7
   dodgeTime: 0.2
-  dodgeDistance: 15
-  dodgeCooldown: 2
+  dodgeDistance: 20
+  dodgeCooldown: 3
+  attackRate: 2
+  damage: 35
+  health: 120

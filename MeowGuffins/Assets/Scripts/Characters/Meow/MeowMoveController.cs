@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class MeowMoveController
 {
-    private BaseMeow meow;
+    public BaseMeow meow;
 
     #region Private variables
     [SerializeField]
@@ -14,12 +14,12 @@ public class MeowMoveController
     private Animator animator;
     private bool m_isDodge;
     private bool m_isWallSliding = false;
-    private float m_dodgeTimeLeft;
     private float m_LastDodge = -100f;
     private ParticleSystem particleSystem;
     #endregion
 
     public bool m_isFacingRight = true;
+    public float m_dodgeTimeLeft;
     //public float move_speed;
     //public float jump_force;
     

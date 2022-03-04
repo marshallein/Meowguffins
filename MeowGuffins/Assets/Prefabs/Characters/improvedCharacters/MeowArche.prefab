@@ -45,10 +45,9 @@ GameObject:
   - component: {fileID: 193370602126579581}
   - component: {fileID: 5179782092968797296}
   - component: {fileID: 8791126825669094929}
-  - component: {fileID: 130429070672899077}
-  - component: {fileID: 6517528031230067644}
   - component: {fileID: 1394082762464180116}
-  m_Layer: 0
+  - component: {fileID: -1493680626627989295}
+  m_Layer: 9
   m_Name: MeowArche
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -398,6 +397,20 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1394082762464180116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193370602126579579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dacb6a09cc651914d881dd10b6ab055f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  maxHp: 130
 --- !u!114 &-1493680626627989295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,32 +433,6 @@ MonoBehaviour:
   arrow: {fileID: 4936806468654745455, guid: b0b4e1a6d93dbc441864311d18cfd875, type: 3}
   electricArrow: {fileID: 7015379503495770858, guid: 93aacc4f72390cb4eb62b33ddf1fd83a, type: 3}
   arrowForce: 15
---- !u!114 &6517528031230067644
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193370602126579579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ca36adf5c092ac469352dd4d3921137, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1394082762464180116
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 193370602126579579}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dacb6a09cc651914d881dd10b6ab055f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 0
-  maxHp: 130
 --- !u!1 &1826328374421555258
 GameObject:
   m_ObjectHideFlags: 0
@@ -5350,6 +5337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2021203002789297645}
   - component: {fileID: 7721409843863239842}
+  - component: {fileID: 6426976990333900363}
   m_Layer: 0
   m_Name: attack_hitbox
   m_TagString: Untagged
@@ -5378,7 +5366,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7000806185259686282}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -5397,3 +5385,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1420269, y: 0.13505149}
   m_EdgeRadius: 0
+--- !u!114 &6426976990333900363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7000806185259686282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e99addf3cd4064e8dea4212079f5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

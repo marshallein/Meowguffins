@@ -10,27 +10,33 @@ public abstract class BaseEntity : MonoBehaviour
 
     protected float health;
     public float Health { get => health; }
+    public bool IsVulnerable { get; set; }
 
     protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
+        IsVulnerable = true;
     }
 
     public virtual void TakeDamage(float damage)
     {
-        health -= damage;
+        if (IsVulnerable)
+        {
+            health -= damage;
 
-        if (health <= 0)
-        {
-            PlayDeathAnimation();
-        } else
-        {
-            PlayHitAnimation();
+            if (health <= 0)
+            {
+                PlayDeathAnimation();
+            }
+            else
+            {
+                PlayHitAnimation();
+            }
         }
-        
     }
 
-    public virtual void PlayHitAnimation() {
+    public virtual void PlayHitAnimation()
+    {
         if (Time.time < nextAnimTime) return;
 
         animator.SetTrigger("take_damage");
@@ -38,7 +44,8 @@ public abstract class BaseEntity : MonoBehaviour
     }
 
     // This function also triggers BaseEnemy.OnDeath on finished
-    public virtual void PlayDeathAnimation() {
+    public virtual void PlayDeathAnimation()
+    {
         animator.SetTrigger("isDeath2");
     }
 }

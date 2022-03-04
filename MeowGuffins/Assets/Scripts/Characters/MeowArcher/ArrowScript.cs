@@ -12,16 +12,17 @@ public class ArrowScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy" )
+        Debug.Log("hit");
+        if (collision.gameObject.tag == "Enemy")
         {
-            var enemy = collision.GetComponentInChildren<EnemyBehaviour>();
+            var enemy = collision.GetComponentInParent<EnemyHealthController>();
             enemy.TakeDamage(damage);
-            
+
         }
     }
 
