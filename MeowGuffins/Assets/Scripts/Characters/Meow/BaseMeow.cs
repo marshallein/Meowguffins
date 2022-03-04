@@ -18,6 +18,8 @@ public abstract class BaseMeow : BaseEntity
 
     public float MaxHealth { get => MeowObject.Health; }
 
+    public float AttackDamage { get => MeowObject.Damage; }
+
     public bool IsFacingRight { get => moveController.m_isFacingRight; }
 
     protected override void Awake()
@@ -43,9 +45,13 @@ public abstract class BaseMeow : BaseEntity
 
     public void OnDeath()
     {
-        Destroy(this.gameObject);
+        Destroy(this);
     }
 
+    public void OnEndOfDodge()
+    {
+        IsVulnerable = true;
+    }
 
     public void OnReadCharacterMove(InputAction.CallbackContext context)
     {
@@ -57,8 +63,9 @@ public abstract class BaseMeow : BaseEntity
         moveController.OnCharacterJump(context);
     }
 
-    public void OnCharacterDodge(InputAction.CallbackContext context)
+    public virtual void OnCharacterDodge(InputAction.CallbackContext context)
     {
+        IsVulnerable = false;
         moveController.OnCharacterDodge(context);
     }
 
@@ -97,11 +104,15 @@ public abstract class BaseMeow : BaseEntity
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            TakeDamage(10f); // TODO: ScriptableEnemy.Damage here
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Damageable")
+    //    {
+    //        if (collision.GetType() == typeof(BoxCollider2D))
+    //        {
+    //            Debug.Log("hit" + collision.ToString());
+    //            TakeDamage(10f); // TODO: ScriptableEnemy.Damage here
+    //        }
+    //    }
+    //}
 }

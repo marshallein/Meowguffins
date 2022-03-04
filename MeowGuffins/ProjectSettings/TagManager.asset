@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Wall
   - Barrier
+  - Particle System
+  - Damageable
   layers:
   - Default
   - TransparentFX
@@ -17,8 +19,8 @@ TagManager:
   - Ground
   - Wall
   - UI
-  - 
-  - 
+  - Player
+  - Enemy
   - 
   - 
   - 

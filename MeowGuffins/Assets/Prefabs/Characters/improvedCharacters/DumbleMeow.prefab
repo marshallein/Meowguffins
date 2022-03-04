@@ -45,10 +45,9 @@ GameObject:
   - component: {fileID: 288067541221489684}
   - component: {fileID: 8176880458123354040}
   - component: {fileID: 440766163842172120}
-  - component: {fileID: 2011659454011887563}
   - component: {fileID: 7717734257528073370}
   - component: {fileID: -1936416194657971404}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: DumbleMeow
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -379,9 +378,9 @@ MonoBehaviour:
     m_ActionName: Player/Interact[/Keyboard/e]
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2011659454011887563}
-        m_TargetAssemblyTypeName: ShortTeleScript, Assembly-CSharp
-        m_MethodName: OnCharacterTeleport
+      - m_Target: {fileID: -1936416194657971404}
+        m_TargetAssemblyTypeName: DumbleMeow, Assembly-CSharp
+        m_MethodName: OnCharacterDodge
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -398,25 +397,6 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &2011659454011887563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 288067541221489682}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2360271bd552ca4d872634f113d731c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frontCheck: {fileID: 2884883674066275797}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 64
-  dodgeTime: 0.2
-  teleportDistance: 3
-  dodgeCooldown: 5
 --- !u!114 &7717734257528073370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,6 +432,7 @@ MonoBehaviour:
   attack_point: {fileID: 6957068953221081940}
   fireball: {fileID: 4847183391850138466, guid: 109b3a7051dd0064f8506f0bd958e071, type: 3}
   fireballForce: 10
+  horizontal_axis: 0
 --- !u!1 &5803988140176515840
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,13 +503,14 @@ GameObject:
   m_Component:
   - component: {fileID: 6425515035380133733}
   - component: {fileID: 3298685271341951842}
+  - component: {fileID: 7108419393021359276}
   m_Layer: 0
   m_Name: attack_hitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6425515035380133733
 Transform:
   m_ObjectHideFlags: 0
@@ -569,6 +551,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1328733, y: 0.11696291}
   m_EdgeRadius: 0
+--- !u!114 &7108419393021359276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6980878620173838111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e99addf3cd4064e8dea4212079f5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7517148332482662429
 GameObject:
   m_ObjectHideFlags: 0

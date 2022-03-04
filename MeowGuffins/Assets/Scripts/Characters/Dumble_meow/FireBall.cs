@@ -15,7 +15,7 @@ public class FireBall : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            var enemy = collision.GetComponentInChildren<EnemyBehaviour>();
+            var enemy = collision.GetComponentInParent<EnemyHealthController>();
             enemy.TakeDamage(damage);
         }
     }
