@@ -425,6 +425,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groundCheck: {fileID: 288067541118715175}
   frontCheck: {fileID: 2884883674066275797}
+  inventory: []
   meowObject: {fileID: 11400000, guid: 72b2acc849a40844e8904c85a9ff0fd1, type: 2}
   groundCheckLayer:
     serializedVersion: 2

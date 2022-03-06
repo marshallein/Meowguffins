@@ -7,12 +7,17 @@ public abstract class BaseMeow : BaseEntity
 {
     public Transform groundCheck;
     public Transform frontCheck;
-
+    public List<string> inventory;
     public MeowMoveController moveController;
     [SerializeField]
     protected MeowObject meowObject;
     public MeowObject MeowObject => meowObject;
     public LayerMask groundCheckLayer;
+
+    protected DamageScriptable activeDamageBoostItem;
+    private float damageBoostTimer;
+    private float damage;
+    public float Damage { get => damage; }
 
     protected float nextAttackTime = 0f;
 
@@ -31,11 +36,24 @@ public abstract class BaseMeow : BaseEntity
 
     protected virtual void Start()
     {
+        inventory = new List<string>();
     }
 
     protected virtual void Update()
     {
         moveController.Update();
+
+        if (activeDamageBoostItem)
+        {
+            damageBoostTimer += Time.deltaTime;
+            if (damageBoostTimer >= 10)
+            {
+                damage = meowObject.Damage;
+                damageBoostTimer = 0;
+                activeDamageBoostItem = null;
+                print("Damage Boost expired.");
+            }
+        }
     }
 
     protected virtual void FixedUpdate()
@@ -106,15 +124,25 @@ public abstract class BaseMeow : BaseEntity
         }
     }
 
-    //private void OnTriggerEnter2D(Collider2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Damageable")
-    //    {
-    //        if (collision.GetType() == typeof(BoxCollider2D))
-    //        {
-    //            Debug.Log("hit" + collision.ToString());
-    //            TakeDamage(10f); // TODO: ScriptableEnemy.Damage here
-    //        }
-    //    }
-    //}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            TakeDamage(10f); // TODO: ScriptableEnemy.Damage here
+        }
+    }
+
+    public override void Heal(float amount)
+    {
+        health = Mathf.Min(MeowObject.Health, health + amount);
+        print("Health: " + health);
+    }
+
+    public void BoostDamage(DamageScriptable boost)
+    {
+        activeDamageBoostItem = boost;
+        damageBoostTimer = 0;
+        damage = meowObject.Damage + boost.amount;
+        print($"Base damage: {meowObject.Damage}; Boosted: {damage}");
+    }
 }
