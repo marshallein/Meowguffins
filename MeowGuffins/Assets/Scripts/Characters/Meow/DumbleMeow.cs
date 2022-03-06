@@ -32,12 +32,12 @@ public class DumbleMeow : BaseMeow
         Rigidbody2D fbRB = fireballGO.GetComponent<Rigidbody2D>();
         if (checkDirection)
         {
-            fbRB.velocity = fireballSpawn.transform.right * fireballForce;
+            fbRB.velocity = fireballGO.transform.right * fireballForce;
         }
         else
         {
-            fireballSpawn.transform.rotation = new Quaternion(0, -180, 0, 0);
-            fbRB.velocity = fireballSpawn.transform.right * fireballForce;
+            fireballGO.transform.rotation = new Quaternion(0, -180, 0, 0);
+            fbRB.velocity = fireballGO.transform.right * fireballForce;
         }
         nextAttackTime = Time.time + 1f / MeowObject.AttackRate;
 
