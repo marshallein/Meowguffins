@@ -16,6 +16,11 @@ public class MeowMoveController
     private bool m_isWallSliding = false;
     private float m_LastDodge = -100f;
     private ParticleSystem particleSystem;
+
+    private SpeedScriptable activeSpeedBoostItem;
+
+
+    private float boostTimer = 0f;
     #endregion
 
     public bool m_isFacingRight = true;
@@ -55,10 +60,33 @@ public class MeowMoveController
             animator.SetBool("isGrounded", false);
         }
     }
-
+    public void BoostSpeed(SpeedScriptable speedBoostItem)
+    {
+        activeSpeedBoostItem = speedBoostItem;
+        boostTimer = 0;
+    }
+    
     public void FixedUpdate()
     {
-        rigidbody.velocity = new Vector2(horizontal * meow.MeowObject.MoveSpeed, rigidbody.velocity.y);
+        
+        var moveSpeed = meow.MeowObject.MoveSpeed;
+        if (activeSpeedBoostItem)
+        {
+            moveSpeed += activeSpeedBoostItem.amount;
+         
+            boostTimer += Time.deltaTime;
+            if (boostTimer >= 3)
+            {
+                moveSpeed = meow.MeowObject.MoveSpeed;
+                boostTimer = 0;
+                activeSpeedBoostItem = null;
+            }
+        }
+        else
+        {
+            //Debug.Log("speed boost is: " + SpeedBoosted);
+        }
+        rigidbody.velocity = new Vector2(horizontal * moveSpeed, rigidbody.velocity.y);
         if (horizontal != 0)
         {
             animator.SetFloat("Speed", 10);

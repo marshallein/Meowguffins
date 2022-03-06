@@ -4,26 +4,22 @@ using UnityEngine;
 
 public class ArrowScript : MonoBehaviour
 {
-
     public float speed = 2f;
     public Rigidbody2D rb;
-    int count = 0;
-    private float damage = 20f;
-    // Start is called before the first frame update
-    void Start()
+    private float baseDamage = 20f;
+    private DamageScriptable damageBoost;
+
+    public void BoostDamage(DamageScriptable boost)
     {
-
+        damageBoost = boost;
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("hit");
-        if (collision.gameObject.tag == "Enemy")
-        {
-            var enemy = collision.GetComponentInParent<EnemyHealthController>();
-            enemy.TakeDamage(damage);
+        if (collision.gameObject.tag != "Enemy") return;
 
-        }
+        var finalDamage = baseDamage + (damageBoost == null ? 0 : damageBoost.amount);
+        var enemy = collision.GetComponentInParent<EnemyHealthController>();
+        enemy.TakeDamage(finalDamage);
     }
 
     private void Awake()
@@ -35,10 +31,5 @@ public class ArrowScript : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         Destroy(this.gameObject);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
     }
 }

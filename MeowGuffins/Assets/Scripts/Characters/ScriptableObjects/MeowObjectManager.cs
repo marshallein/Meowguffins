@@ -65,6 +65,7 @@ public class MeowObjectManager : MonoBehaviour
 
     public void UpdateCameraFollowing()
     {
+        if (virtualCamera == null) return;
         virtualCamera.m_Follow = ActiveMeow.transform;
     }
 }

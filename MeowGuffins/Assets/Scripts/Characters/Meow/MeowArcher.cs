@@ -12,49 +12,41 @@ public class MeowArcher : BaseMeow
 
     public override void OnCharacterAttack2(InputAction.CallbackContext context)
     {
-        attack_arrow_timmer("attack_set2");
+        attack_arrow_timmer("attack_set2", arrow);
     }
 
     public override void OnCharacterAttack3(InputAction.CallbackContext context)
     {
-        attack_arrow_timmer("attack_set3");
+        attack_arrow_timmer("attack_set3", electricArrow);
     }
 
-    private void attack_arrow_timmer(string trigger)
+    private void attack_arrow_timmer(string trigger, GameObject arrowType)
     {
-        if (Time.time >= nextAttackTime)
+        if (Time.time < nextAttackTime) return;
+        
+        var checkDirection = IsFacingRight;
+
+        animator.SetTrigger(trigger);
+        var arrowSpawn = Instantiate(arrowType, attack_point.position, attack_point.rotation);
+        
+        var arrowScript = arrowSpawn.GetComponent<ArrowScript>();
+        if (activeDamageBoostItem)
         {
-            var checkDirection = IsFacingRight;
-            animator.SetTrigger(trigger);
-            if (trigger == "attack_set2")
-            {
-                GameObject arrowSpawn = Instantiate(arrow, attack_point.position, attack_point.rotation);
-                Rigidbody2D arrowRb = arrowSpawn.GetComponent<Rigidbody2D>();
-                if (checkDirection)
-                {
-                    arrowRb.velocity = arrowSpawn.transform.right * arrowForce;
-                }
-                else
-                {
-                    arrowSpawn.transform.rotation = new Quaternion(0, -180, 0, 0);
-                    arrowRb.velocity = arrowSpawn.transform.right * arrowForce;
-                }
-            }
-            else
-            {
-                GameObject arrowSpawn = Instantiate(electricArrow, attack_point.position, attack_point.rotation);
-                Rigidbody2D arrowRb = arrowSpawn.GetComponent<Rigidbody2D>();
-                if (checkDirection)
-                {
-                    arrowRb.velocity = arrowSpawn.transform.right * arrowForce;
-                }
-                else
-                {
-                    arrowSpawn.transform.rotation = new Quaternion(0, -180, 0, 0);
-                    arrowRb.velocity = arrowSpawn.transform.right * arrowForce;
-                }
-            }
-            nextAttackTime = Time.time + 1f / MeowObject.AttackRate;
+            arrowScript.BoostDamage(activeDamageBoostItem);
         }
+
+        Rigidbody2D arrowRb = arrowSpawn.GetComponent<Rigidbody2D>();
+        if (checkDirection)
+        {
+            arrowRb.velocity = arrowSpawn.transform.right * arrowForce;
+        }
+        else
+        {
+            arrowSpawn.transform.rotation = new Quaternion(0, -180, 0, 0);
+            arrowRb.velocity = arrowSpawn.transform.right * arrowForce;
+        }
+        
+        nextAttackTime = Time.time + 1f / MeowObject.AttackRate;
+        
     }
 }

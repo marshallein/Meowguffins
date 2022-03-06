@@ -9,6 +9,7 @@ TagManager:
   - Barrier
   - Particle System
   - Damageable
+  - Collectable
   layers:
   - Default
   - TransparentFX

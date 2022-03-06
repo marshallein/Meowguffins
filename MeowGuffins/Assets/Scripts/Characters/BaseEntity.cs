@@ -48,4 +48,9 @@ public abstract class BaseEntity : MonoBehaviour
     {
         animator.SetTrigger("isDeath2");
     }
+
+    public virtual void Heal(float amount)
+    {
+        health += amount;
+    }
 }
