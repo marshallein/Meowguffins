@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabName: MeowKnight1
   prefab: {fileID: 4058014199335816686, guid: ffa8f50c51f15f646af3370c21ca5b0d, type: 3}
+  menuSprite: {fileID: 0}
   moveSpeed: 8
   jumpForce: 27
   wallJumpTime: 0.02
   wallSlideSpeed: 0.06
   wallDistance: 0.7
-  dodgeTime: 0.2
-  dodgeDistance: 15
-  dodgeCooldown: 3
+  dodgeTime: 0.4
+  dodgeDistance: 20
+  dodgeCooldown: 1.5
   attackRate: 2
   damage: 30
   health: 120

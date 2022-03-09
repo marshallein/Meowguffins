@@ -124,13 +124,13 @@ public abstract class BaseMeow : BaseEntity
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            TakeDamage(10f); // TODO: ScriptableEnemy.Damage here
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.tag == "Enemy")
+    //    {
+    //        TakeDamage(10f); // TODO: ScriptableEnemy.Damage here
+    //    }
+    //}
 
     public override void Heal(float amount)
     {

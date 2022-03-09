@@ -578,6 +578,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meow_Knight
       objectReference: {fileID: 0}
+    - target: {fileID: 4058014199335816686, guid: ffa8f50c51f15f646af3370c21ca5b0d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4058014199335816688, guid: ffa8f50c51f15f646af3370c21ca5b0d, type: 3}
       propertyPath: m_RootOrder
       value: 2

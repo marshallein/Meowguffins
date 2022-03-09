@@ -4,12 +4,17 @@ using UnityEngine;
 
 public class BaseEnemyAttackHandler : MonoBehaviour
 {
+
+    public float damage = 10f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetType() == typeof(BoxCollider2D))
+        if (collision.gameObject.tag == "Player")
         {
-            var player = collision.GetComponent<BaseMeow>();
-            player.TakeDamage(10f);
+            if (collision.GetType() == typeof(BoxCollider2D))
+            {
+                var player = collision.GetComponent<BaseMeow>();
+                player.TakeDamage(damage);
+            }
         }
     }
 }

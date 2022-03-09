@@ -10,6 +10,7 @@ TagManager:
   - Particle System
   - Damageable
   - Collectable
+  - Boss
   layers:
   - Default
   - TransparentFX
@@ -22,9 +23,6 @@ TagManager:
   - UI
   - Player
   - Enemy
-  - 
-  - 
-  - 
   - 
   - 
   - 

@@ -20,13 +20,6 @@ public class EnemyHealthController : MonoBehaviour
         m_animator = GetComponent<Animator>();
     }
 
-    private void OnEnable()
-    {
-        currentHeath = maxHeath;
-        m_animator.SetBool("isDead", false);
-
-    }
-
     public void OnDead()
     {
         this.gameObject.SetActive(false);
@@ -39,7 +32,8 @@ public class EnemyHealthController : MonoBehaviour
         if (currentHeath <= 0)
         {
             m_animator.SetTrigger("isDead");
-            this.enabled = false;
+            currentHeath = maxHeath;
+            m_enemyMeleeBehaviour.AttackMode = false;
         }
     }
 

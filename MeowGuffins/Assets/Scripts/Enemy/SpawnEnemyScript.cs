@@ -7,30 +7,19 @@ public class SpawnEnemyScript : MonoBehaviour
     public Transform leftLimit;
     public Transform rightLimit;
     public ObjectPoolingScript pool;
-    [SerializeField]
-    private bool _canSpawn = true;
+    public bool spawnOneTime = true;
 
-    private void Awake()
+    private void FixedUpdate()
     {
-
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (_canSpawn)
+        if (spawnOneTime)
         {
             SpawnEnemy();
-        } else
-        {
-            return;
         }
+    }
+
+    private void OnBecameInvisible()
+    {
+        StartCoroutine(DelayTimeToSpawn(5));
     }
 
     private void SpawnEnemy()
@@ -44,7 +33,14 @@ public class SpawnEnemyScript : MonoBehaviour
             enemy.gameObject.GetComponent<EnenyMeleeBehaviour>().rightLimit = this.rightLimit;
 
             enemy.SetActive(true);
-            _canSpawn = false;
         }
+        spawnOneTime = false;
+    }
+
+
+    public IEnumerator DelayTimeToSpawn(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        SpawnEnemy();
     }
 }

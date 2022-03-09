@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5165808613992096701}
   - component: {fileID: 5165808613992096700}
   - component: {fileID: 5165808613992096643}
+  - component: {fileID: 3671088227304216265}
   m_Layer: 0
   m_Name: SpawnPoint_viking
   m_TagString: Untagged
@@ -46,7 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc68b86a9919d7444a29ab29c9323113, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountToPool: 5
+  amountToPool: 1
   PrefabToPool: {fileID: 4811653053067133065, guid: 40e0ba6af2fd1034bbeb21a69cd08a2c, type: 3}
 --- !u!114 &5165808613992096643
 MonoBehaviour:
@@ -64,6 +65,57 @@ MonoBehaviour:
   rightLimit: {fileID: 5165808614934238032}
   pool: {fileID: 5165808613992096700}
   _canSpawn: 1
+--- !u!212 &3671088227304216265
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5165808613992096642}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 80fbe4daad7db324fa0165ad70e4448a, type: 3}
+  m_Color: {r: 0.03773582, g: 0.036845826, b: 0.036845826, a: 0.0627451}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.32, y: 0.32}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &5165808614934238039
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/menu/Menu.unity
+    path: Assets/Animation/Enemy/ANIM_Golem/menu/Menu.unity
     guid: 808f7d7fdd2e83846a9dc812fcc5f4f8
   - enabled: 1
     path: Assets/Scenes/develop/Scene1_Jungle.unity
@@ -14,4 +14,5 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/develop/Scene2_Boss.unity
     guid: 1229e4488b2c55c458a2cb652fe79ad2
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: a98ef377e385af84e9d5ed3e57c764e6, type: 2}

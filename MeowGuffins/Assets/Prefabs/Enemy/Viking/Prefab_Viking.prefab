@@ -435,8 +435,9 @@ MonoBehaviour:
   inRange: 0
   hotZone: {fileID: 4811653051798231623}
   triggerZone: {fileID: 4811653052225191758}
-  startDazedTime: 1
+  startDazedTime: 0.2
   dazedTime: 0
+  animator: {fileID: 0}
 --- !u!114 &4811653053067133059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -449,5 +450,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad3c63f7cbe65343a6f3d4da84baade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHeath: 100
+  maxHeath: 200
   currentHeath: 0
