@@ -4,6 +4,7 @@ using UnityEngine;
 
 public abstract class BaseEntity : MonoBehaviour
 {
+    [SerializeField]
     protected Animator animator;
     float nextAnimTime = 0f;
     float frameRate = 2f;
@@ -53,4 +54,5 @@ public abstract class BaseEntity : MonoBehaviour
     {
         health += amount;
     }
+    
 }

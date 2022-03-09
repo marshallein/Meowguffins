@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1403305205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403305206}
+  m_Layer: 0
+  m_Name: ItemSpawnPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1403305206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403305205}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.07, y: 1.95, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7850218241135035581}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7850218241135035555
 GameObject:
   m_ObjectHideFlags: 0
@@ -32,7 +62,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.84, y: -0.45, z: -0.68142587}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1403305206}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -120,6 +151,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   animator: {fileID: 7850218241135035583}
+  itemSpawnPoint: {fileID: 1403305206}
+  items:
+  - {fileID: 11400000, guid: 43ffbc55ae4feb348845ca67b51a9f77, type: 2}
+  - {fileID: 11400000, guid: d562a6c57222dd3498680fbec6a3ad7f, type: 2}
+  - {fileID: 11400000, guid: a28c3991f96d04f4d89a1c8a8653cbe5, type: 2}
+  - {fileID: 11400000, guid: dfe2069c2c4e35c499e186a1bbf13440, type: 2}
 --- !u!114 &7850218241135035578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +294,14 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 73ec37d8-d648-4105-b6bf-f827d0ddde5c
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 04a3d81a-1004-44cf-b968-f3d228d382d3
+    m_ActionName: Player/Dodge[/Keyboard/v]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ee7713b3-b0a5-42d6-b9f9-66a5f3e1ae88
+    m_ActionName: Player/Switch[/Keyboard/z]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

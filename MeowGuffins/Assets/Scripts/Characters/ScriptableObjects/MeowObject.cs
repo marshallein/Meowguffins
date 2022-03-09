@@ -45,5 +45,8 @@ public class MeowObject : ScriptableObject
     [SerializeField]
     private float health = 120f;
     public float Health => health;
+    [SerializeField]
+    private int coin = 0;
+    public int Coin => coin;
 
 }
