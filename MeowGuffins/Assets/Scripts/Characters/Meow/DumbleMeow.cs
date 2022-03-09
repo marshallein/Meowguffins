@@ -61,6 +61,7 @@ public class DumbleMeow : BaseMeow
         {
             if (!IsAbleToTeleport())
             {
+                IsVulnerable = false;
                 moveController.m_dodgeTimeLeft = moveController.meow.MeowObject.DodgeTime;
                 m_LastDodge = Time.time;
                 if (moveController.m_dodgeTimeLeft > 0)

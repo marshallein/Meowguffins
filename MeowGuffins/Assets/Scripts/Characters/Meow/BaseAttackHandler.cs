@@ -19,8 +19,16 @@ public class BaseAttackHandler : MonoBehaviour
             {
                 if (collision.gameObject.CompareTag("Enemy"))
                 {
+                    Debug.Log("Attack enemy");
                     var enemy = collision.GetComponentInParent<EnemyHealthController>();
                     enemy.TakeDamage(baseMeow.AttackDamage);
+                }
+
+                if (collision.gameObject.tag == "Boss")
+                {
+                    var boss = collision.GetComponentInParent<BossHeathController>();
+                    boss.BossTakeDamage(baseMeow.AttackDamage);
+                    Destroy(this.gameObject);
                 }
             }
         }

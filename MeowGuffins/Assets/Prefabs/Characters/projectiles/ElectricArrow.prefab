@@ -166,3 +166,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 20
   rb: {fileID: -1447558125058211161}
+  isSpecial: 1

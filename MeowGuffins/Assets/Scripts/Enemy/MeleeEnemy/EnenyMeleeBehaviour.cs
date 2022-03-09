@@ -20,11 +20,11 @@ public class EnenyMeleeBehaviour : MonoBehaviour
     public float startDazedTime;
     [HideInInspector]
     public float dazedTime;
+    public Animator animator;
     #endregion
 
     #region private variables
     private bool m_attackMode;
-    private Animator animator;
     private float m_distance;
     private bool cooling;
     private float m_intTimer;
@@ -150,7 +150,7 @@ public class EnenyMeleeBehaviour : MonoBehaviour
         animator.SetBool("isAttack", true);
     }
 
-    private void OnMove()
+    public virtual void OnMove()
     {
         animator.SetBool("isWalk", true);
 

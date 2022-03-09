@@ -12,11 +12,6 @@ public class EnenyRangedBehaviour : EnenyMeleeBehaviour
         base.Awake();
     }
 
-    public override void OnAttack()
-    {
-        base.OnAttack();
-    }
-
     public void AttackAttached()
     {
         StartCoroutine(StartThunderAttack());
@@ -40,4 +35,15 @@ public class EnenyRangedBehaviour : EnenyMeleeBehaviour
 
         }
     }
+
+    public override void OnMove()
+    {
+        animator.SetBool("isWalk", true);
+
+        Vector2 targetPosition = new Vector2(target.position.x, transform.position.y);
+
+        transform.position = Vector2.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+
+    }
+
 }

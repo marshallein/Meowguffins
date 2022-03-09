@@ -14,14 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabName: MeowArcher1
   prefab: {fileID: 193370602126579579, guid: 276a1649c725d1c4e95f2816597f5945, type: 3}
+  menuSprite: {fileID: 0}
   moveSpeed: 8
   jumpForce: 30
   wallJumpTime: 0.02
   wallSlideSpeed: 0.06
   wallDistance: 0.7
-  dodgeTime: 0.2
-  dodgeDistance: 9
-  dodgeCooldown: 1.5
+  dodgeTime: 0.6
+  dodgeDistance: 23
+  dodgeCooldown: 0.5
   attackRate: 2
   damage: 20
   health: 120

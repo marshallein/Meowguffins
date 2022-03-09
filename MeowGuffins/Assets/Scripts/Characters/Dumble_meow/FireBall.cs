@@ -14,13 +14,25 @@ public class FireBall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag != "Enemy") return;
-
         var finalDamage = baseDamage + (damageBoost == null ? 0 : damageBoost.amount);
-        print("damage of fireball " + finalDamage);
-        var enemy = collision.GetComponentInChildren<EnemyBehaviour>();
-        enemy.TakeDamage(finalDamage);
+        if (collision.gameObject.tag == "Enemy")
+        {
+            var enemy = collision.GetComponentInParent<EnemyHealthController>();
+            enemy.TakeDamage(finalDamage);
+            Destroy(this.gameObject);
+        }
 
+        if (collision.gameObject.tag == "Boss")
+        {
+            var boss = collision.GetComponentInParent<BossHeathController>();
+            boss.BossTakeDamage(finalDamage);
+            Destroy(this.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Wall")
+        {
+            Destroy(this.gameObject);
+        }
     }
 
     private void Awake()
@@ -30,7 +42,7 @@ public class FireBall : MonoBehaviour
 
     IEnumerator destroyBullet()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(6);
         Destroy(this.gameObject);
     }
 }
