@@ -43,15 +43,15 @@ public class EnenyMeleeBehaviour : MonoBehaviour
         m_tempSpeed = moveSpeed;
     }
 
-    //private void OnEnable()
-    //{
-    //    OnSelectAttack();
-    //}
+    private void OnEnable()
+    {
+        OnSelectAttack();
+    }
 
     // Update is called once per frame
     public void Update()
     {
-        if (leftLimit == null || rightLimit == null || target == null) return;
+        //if (leftLimit == null || rightLimit == null || target == null) return;
 
         if (dazedTime > 0)
         {

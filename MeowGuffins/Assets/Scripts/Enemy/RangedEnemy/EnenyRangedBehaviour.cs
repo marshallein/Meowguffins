@@ -38,7 +38,6 @@ public class EnenyRangedBehaviour : EnenyMeleeBehaviour
 
     public override void OnMove()
     {
-        if (target == null) return;
 
         animator.SetBool("isWalk", true);
 

@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using CodeMonkey.Utils;
+using CodeMonkey;
 public class BaseAttackHandler : MonoBehaviour
 {
     private BaseMeow baseMeow;
@@ -19,7 +20,6 @@ public class BaseAttackHandler : MonoBehaviour
             {
                 if (collision.gameObject.CompareTag("Enemy"))
                 {
-                    Debug.Log("Attack enemy");
                     var enemy = collision.GetComponentInParent<EnemyHealthController>();
                     enemy.TakeDamage(baseMeow.AttackDamage);
                 }
@@ -28,7 +28,6 @@ public class BaseAttackHandler : MonoBehaviour
                 {
                     var boss = collision.GetComponentInParent<BossHeathController>();
                     boss.BossTakeDamage(baseMeow.AttackDamage);
-                    Destroy(this.gameObject);
                 }
             }
         }

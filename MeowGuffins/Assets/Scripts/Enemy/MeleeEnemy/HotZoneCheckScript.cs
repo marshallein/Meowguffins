@@ -20,7 +20,6 @@ public class HotZoneCheckScript : MonoBehaviour
     {
         if (inRange && !animator.GetCurrentAnimatorStateInfo(0).IsName("isAttack"))
         {
-            m_parent.target = target.transform;
             m_parent.OnFlip();
         }
     }
@@ -30,7 +29,6 @@ public class HotZoneCheckScript : MonoBehaviour
         var target = collision.gameObject;
         if (target.CompareTag("Player"))
         {
-            this.target = target;
             inRange = true;
         }
     }
@@ -45,7 +43,6 @@ public class HotZoneCheckScript : MonoBehaviour
             m_parent.triggerZone.SetActive(true);
             m_parent.inRange = false;
             m_parent.OnSelectAttack();
-            this.target = null;
         }
     }
 }
