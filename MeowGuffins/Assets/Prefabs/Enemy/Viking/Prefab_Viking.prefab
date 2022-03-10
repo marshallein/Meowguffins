@@ -140,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b36739ef1185c4e8e6940c22289e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 10
 --- !u!1 &4811653052225191758
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,5 +451,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad3c63f7cbe65343a6f3d4da84baade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHeath: 200
+  maxHeath: 1
   currentHeath: 0
