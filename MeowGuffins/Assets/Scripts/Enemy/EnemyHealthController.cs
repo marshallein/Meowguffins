@@ -12,17 +12,19 @@ public class EnemyHealthController : MonoBehaviour
     private float currentHeath;
     private EnenyMeleeBehaviour m_enemyMeleeBehaviour;
     private Animator m_animator;
+    private CoinScriptable coin;
 
     private void Awake()
     {
         currentHeath = maxHeath;
         m_enemyMeleeBehaviour = GetComponent<EnenyMeleeBehaviour>();
         m_animator = GetComponent<Animator>();
+        coin = Resources.LoadAll<CoinScriptable>("Items")[0];
     }
 
     public void OnDead()
     {
-        this.gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     public void TakeDamage(float inputDamage)
@@ -34,6 +36,19 @@ public class EnemyHealthController : MonoBehaviour
             m_animator.SetTrigger("isDead");
             currentHeath = maxHeath;
             m_enemyMeleeBehaviour.AttackMode = false;
+
+            var spawnPoint = transform.position;
+            for (int i = 0; i < 3; i++)
+            {
+                var coinGO = Instantiate(coin.itemPrefab, spawnPoint, Quaternion.identity);
+                Rigidbody2D rb = coinGO.GetComponent<Rigidbody2D>();
+
+                var randomDirectionPoint = spawnPoint +
+                    new Vector3(Random.Range(spawnPoint.x - 1f, spawnPoint.x + 1f), 2f);
+                var directionVector = (randomDirectionPoint - spawnPoint).normalized;
+
+                rb.AddForce(directionVector * 100, ForceMode2D.Force);
+            }
         }
     }
 
