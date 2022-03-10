@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabName: MeowArcher1
   prefab: {fileID: 193370602126579579, guid: 276a1649c725d1c4e95f2816597f5945, type: 3}
-  menuSprite: {fileID: 0}
+  menuSprite: {fileID: 2475929708402795311, guid: f42bf83fc33ce3547ac4e140d15ae83c, type: 3}
   moveSpeed: 8
   jumpForce: 30
   wallJumpTime: 0.02
@@ -26,3 +26,4 @@ MonoBehaviour:
   attackRate: 2
   damage: 20
   health: 120
+  coin: 0
