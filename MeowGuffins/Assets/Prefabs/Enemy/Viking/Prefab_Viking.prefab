@@ -451,5 +451,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bad3c63f7cbe65343a6f3d4da84baade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHeath: 1
+  maxHeath: 200
   currentHeath: 0
