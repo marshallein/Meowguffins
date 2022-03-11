@@ -19,7 +19,6 @@ public class OpacityControl : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            Debug.Log("player enter the leaf");
             m_tileMap.color = new Color(1f, 1f, 1f, 0.4f);
         }
     }

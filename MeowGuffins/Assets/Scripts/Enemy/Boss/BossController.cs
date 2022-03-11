@@ -15,6 +15,7 @@ public class BossController : MonoBehaviour
     public float distanceBetweenThunder = 5f;
     public Transform ghostSpawn;
 
+
     public void LookAtPlayer(Transform player)
     {
         Vector3 flipped = transform.localScale;
@@ -101,6 +102,11 @@ public class BossController : MonoBehaviour
     public bool InsideOfBound(Transform _boss)
     {
         return _boss.position.x > LeftLimit.position.x && _boss.position.x < RightLimit.position.x;
+    }
+
+    public void OnScreamAnimation()
+    {
+        CinemachineShake.Instance.Shake(1.5f, 10f);
     }
 
     void OnDrawGizmosSelected()

@@ -8,13 +8,11 @@ public class GameInputManager : MonoBehaviour
 
     public void OnReadCharacterMove(InputAction.CallbackContext context)
     {
-        print("move");
         MeowObjectManager.Instance.ActiveMeow.OnReadCharacterMove(context);
     }
 
     public void OnCharacterJump(InputAction.CallbackContext context)
     {
-        print("Jump");
         MeowObjectManager.Instance.ActiveMeow.OnCharacterJump(context);
     }
 

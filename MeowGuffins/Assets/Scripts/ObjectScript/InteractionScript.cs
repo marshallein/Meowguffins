@@ -13,6 +13,7 @@ public class InteractionScript : MonoBehaviour
 
     public void OnInteractionPress(InputAction.CallbackContext context)
     {
+        Debug.Log("press");
         if (m_isInRange)
         {
             if (context.performed)

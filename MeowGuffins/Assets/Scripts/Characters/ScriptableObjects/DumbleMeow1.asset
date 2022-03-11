@@ -17,13 +17,13 @@ MonoBehaviour:
   menuSprite: {fileID: 4746033552134490201, guid: 8e784c0eac9230245ad60d637f34c902, type: 3}
   moveSpeed: 8
   jumpForce: 26
-  menuSprite: {fileID: 4746033552134490201, guid: 8e784c0eac9230245ad60d637f34c902, type: 3}
   wallJumpTime: 0.02
   wallSlideSpeed: 0.06
   wallDistance: 0.7
   dodgeTime: 0.2
   dodgeDistance: 4
-  dodgeCooldown: 3
+  dodgeCooldown: 4
   attackRate: 2
   damage: 20
   health: 120
+  coin: 0
