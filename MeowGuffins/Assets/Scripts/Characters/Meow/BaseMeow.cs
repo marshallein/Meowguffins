@@ -16,6 +16,10 @@ public abstract class BaseMeow : BaseEntity
 
     protected DamageScriptable activeDamageBoostItem;
     private float damageBoostTimer;
+
+    private List<ItemScriptable> eternalItems;
+
+    
     private float damage;
     public float Damage { get => damage; }
 
@@ -37,6 +41,7 @@ public abstract class BaseMeow : BaseEntity
     protected virtual void Start()
     {
         inventory = new List<string>();
+        eternalItems = new List<ItemScriptable>();
     }
 
     protected virtual void Update()
@@ -48,7 +53,6 @@ public abstract class BaseMeow : BaseEntity
             damageBoostTimer += Time.deltaTime;
             if (damageBoostTimer >= 10)
             {
-                damage = meowObject.Damage;
                 damageBoostTimer = 0;
                 activeDamageBoostItem = null;
                 print("Damage Boost expired.");
@@ -142,7 +146,54 @@ public abstract class BaseMeow : BaseEntity
     {
         activeDamageBoostItem = boost;
         damageBoostTimer = 0;
-        damage = meowObject.Damage + boost.amount;
+        UpdateStats();
         print($"Base damage: {meowObject.Damage}; Boosted: {damage}");
+    }
+
+    public void AddEternalItem(ItemScriptable item)
+    {
+        eternalItems.Add(item);
+        UpdateStats();
+    }
+
+    public void UpdateStats()
+    {
+        // Reset damage & speed
+        damage = meowObject.Damage;
+        moveController.moveSpeed = meowObject.MoveSpeed;
+        moveController.jumpForce = meowObject.JumpForce;
+
+        // Add bonus damage
+        if (activeDamageBoostItem)
+        {
+            damage += activeDamageBoostItem.amount;
+        }
+
+        // Add bonus speed
+        if (moveController.activeSpeedBoostItem)
+        {
+            moveController.moveSpeed += moveController.activeSpeedBoostItem.amount;
+        }
+
+        // Add bonus jump force
+        if (moveController.activeJumpForceItem)
+        {
+            moveController.jumpForce += moveController.activeJumpForceItem.amount;
+        }
+
+        // Add eternal damage, speed & jump force
+        foreach (var eternalItem in eternalItems)
+        {
+            if (eternalItem is DamageScriptable)
+            {
+                damage += (eternalItem as DamageScriptable).amount;
+            } else if (eternalItem is SpeedScriptable)
+            {
+                moveController.moveSpeed += (eternalItem as SpeedScriptable).amount;
+            } else if (eternalItem is JumpForceScriptable)
+            {
+                moveController.jumpForce += (eternalItem as JumpForceScriptable).amount;
+            }
+        }
     }
 }

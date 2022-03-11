@@ -6,7 +6,7 @@ public class EnenyRangedBehaviour : EnenyMeleeBehaviour
 {
 
     private ObjectPoolingScript poolingScript;
-    private void Awake()
+    private new void Awake()
     {
         poolingScript = GetComponentInChildren<ObjectPoolingScript>();
         base.Awake();

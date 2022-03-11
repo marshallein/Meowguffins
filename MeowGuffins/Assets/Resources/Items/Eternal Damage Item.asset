@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e91053362f625b41960584775de251a, type: 3}
+  m_Name: Eternal Damage Item
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 3110702559570591047, guid: 068f2b39137767a4abc3fd5f64fed95e, type: 3}
+  isEternal: 1
+  amount: 20
