@@ -9,4 +9,9 @@ public class StartButton : MonoBehaviour
     {
         SceneManager.LoadScene("Scene1_Jungle");
     }
+
+    public void OnClickBossScene()
+    {
+        SceneManager.LoadScene("Scene2_Boss");
+    }
 }

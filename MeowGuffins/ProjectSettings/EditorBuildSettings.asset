@@ -14,5 +14,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/develop/Scene2_Boss.unity
     guid: 1229e4488b2c55c458a2cb652fe79ad2
+  - enabled: 1
+    path: Assets/Scenes/menu/CharactersSelection.unity
+    guid: 8ca32235d3a979241b6e6cfe9a9f2f36
+  - enabled: 1
+    path: Assets/Scenes/menu/CharactersSelectionBoss.unity
+    guid: 93e940ac493792b49bf33688c6d15738
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a98ef377e385af84e9d5ed3e57c764e6, type: 2}

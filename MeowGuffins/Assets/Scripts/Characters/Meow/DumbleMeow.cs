@@ -45,8 +45,12 @@ public class DumbleMeow : BaseMeow
 
     public override void OnCharacterAttack3(InputAction.CallbackContext context)
     {
+        if (CoinCountScript.coinCount < 10)
+        {
+            return;
+        }
         attack_timmer("healing");
-
+        CoinCountScript.coinCount -= 10;
         health = Mathf.Min(MeowObject.Health, health + healAmount);
     }
 
