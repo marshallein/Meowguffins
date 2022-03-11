@@ -7,10 +7,12 @@ public class BossHeathController : MonoBehaviour
 {
     public Slider healthBar;
     public float maxHealth;
+    public GameObject spike;
 
     private float m_currentHealth;
     private Animator m_animator;
     private SpriteRenderer m_spriteRenderer;
+    public bool isVunerable = false;
 
     private void Awake()
     {
@@ -40,10 +42,19 @@ public class BossHeathController : MonoBehaviour
 
     public void BossTakeDamage(float damage)
     {
+        if (isVunerable)
+        {
+            return;
+        }
         m_currentHealth -= damage;
-        if(m_currentHealth <= 0)
+        if (m_currentHealth <= 0)
         {
             m_animator.SetBool("isDead", true);
         }
+    }
+    public void OnDeadAnimation()
+    {
+        spike.SetActive(false);
+        this.gameObject.SetActive(false);
     }
 }

@@ -20,7 +20,7 @@ MonoBehaviour:
   wallJumpTime: 0.02
   wallSlideSpeed: 0.06
   wallDistance: 0.7
-  dodgeTime: 0.4
+  dodgeTime: 0.3
   dodgeDistance: 20
   dodgeCooldown: 1.5
   attackRate: 2
