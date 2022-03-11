@@ -11,7 +11,6 @@ public class FireBall : MonoBehaviour
     {
         damageBoost = boost;
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var finalDamage = baseDamage + (damageBoost == null ? 0 : damageBoost.amount);

@@ -5,4 +5,5 @@ using UnityEngine;
 public abstract class ItemScriptable : ScriptableObject
 {
     public GameObject itemPrefab;
+    public bool isEternal;
 }

@@ -17,16 +17,18 @@ public class MeowMoveController
     private float m_LastDodge = -100f;
     private ParticleSystem particleSystem;
 
-    private SpeedScriptable activeSpeedBoostItem;
+    public SpeedScriptable activeSpeedBoostItem;
+    public JumpForceScriptable activeJumpForceItem;
 
 
-    private float boostTimer = 0f;
+    private float speedBoostTimer = 0f;
+    private float jumpBoostTimer = 0f;
     #endregion
 
     public bool m_isFacingRight = true;
     public float m_dodgeTimeLeft;
-    //public float move_speed;
-    //public float jump_force;
+    public float moveSpeed;
+    public float jumpForce;
     
     //public float wallJumpTime = 0.02f;
     //public float wallSlideSpeed = 0.06f;
@@ -50,6 +52,9 @@ public class MeowMoveController
         this.animator = meow.GetComponent<Animator>();
         this.transform = meow.transform;
         particleSystem = meow.GetComponentInChildren<ParticleSystem>();
+
+        moveSpeed = meow.MeowObject.MoveSpeed;
+        jumpForce = meow.MeowObject.JumpForce;
     }
 
     public void Update()
@@ -63,28 +68,38 @@ public class MeowMoveController
     public void BoostSpeed(SpeedScriptable speedBoostItem)
     {
         activeSpeedBoostItem = speedBoostItem;
-        boostTimer = 0;
+        speedBoostTimer = 0;
+        meow.UpdateStats();
     }
-    
+
+    public void BoostJumpForce(JumpForceScriptable item)
+    {
+        activeJumpForceItem = item;
+        jumpBoostTimer = 0;
+        meow.UpdateStats();
+    }
+
     public void FixedUpdate()
     {
-        
-        var moveSpeed = meow.MeowObject.MoveSpeed;
         if (activeSpeedBoostItem)
         {
-            moveSpeed += activeSpeedBoostItem.amount;
-         
-            boostTimer += Time.deltaTime;
-            if (boostTimer >= 3)
+            speedBoostTimer += Time.deltaTime;
+            if (speedBoostTimer >= 3)
             {
-                moveSpeed = meow.MeowObject.MoveSpeed;
-                boostTimer = 0;
+                speedBoostTimer = 0;
                 activeSpeedBoostItem = null;
+                meow.UpdateStats();
             }
         }
-        else
+        if (activeJumpForceItem)
         {
-            //Debug.Log("speed boost is: " + SpeedBoosted);
+            jumpBoostTimer += Time.deltaTime;
+            if (jumpBoostTimer >= 10)
+            {
+                jumpBoostTimer = 0;
+                activeJumpForceItem = null;
+                meow.UpdateStats();
+            }
         }
         rigidbody.velocity = new Vector2(horizontal * moveSpeed, rigidbody.velocity.y);
         if (horizontal != 0)
@@ -177,15 +192,15 @@ public class MeowMoveController
         if (context.performed)
         {
             CreateDust();
-            var jump_force = meow.MeowObject.JumpForce;
+            
             if (m_isWallSliding && horizontal != 0)
             {
                 rigidbody.AddForce(new Vector2(1500 * -horizontal, 0));
-                rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump_force);
+                rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
             }
             else if (IsCharacterisGrounded())
             {
-                rigidbody.velocity = new Vector2(rigidbody.velocity.x, jump_force);
+                rigidbody.velocity = new Vector2(rigidbody.velocity.x, jumpForce);
             }
         }
         if (context.canceled && rigidbody.velocity.y > 0f)

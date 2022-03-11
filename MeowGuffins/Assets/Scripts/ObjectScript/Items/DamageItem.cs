@@ -8,13 +8,20 @@ public class DamageItem : Item
     protected DamageScriptable damageSO;
     public DamageScriptable DamageSO { get => damageSO; }
 
-    //public override void UseOn(BaseEntity entity)
-    //{
-    //    base.UseOn(entity);
+    public override void UseOn(BaseEntity entity)
+    {
+        base.UseOn(entity);
 
-    //    var meow = entity as BaseMeow;
-    //    meow.BoostDamage(damageSO);
-    //}
+        var meow = entity as BaseMeow;
+
+        if (damageSO.isEternal == true)
+        {
+            meow.AddEternalItem(damageSO);
+        }
+        else {
+            meow.BoostDamage(damageSO);
+        }
+    }
 
     protected override bool CanBeUsedOn(BaseEntity entity)
     {

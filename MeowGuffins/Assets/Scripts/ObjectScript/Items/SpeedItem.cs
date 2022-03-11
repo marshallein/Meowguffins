@@ -13,7 +13,15 @@ public class SpeedItem : Item
         base.UseOn(entity);
 
         var meow = entity as BaseMeow;
-        meow.moveController.BoostSpeed(speedSO);
+        
+        if (speedSO.isEternal == true)
+        {
+            meow.AddEternalItem(speedSO);
+        }
+        else
+        {
+            meow.moveController.BoostSpeed(speedSO);
+        }
     }
 
     protected override bool CanBeUsedOn(BaseEntity entity)

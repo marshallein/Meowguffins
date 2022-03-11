@@ -54,5 +54,4 @@ public abstract class BaseEntity : MonoBehaviour
     {
         health += amount;
     }
-    
 }
