@@ -42,7 +42,6 @@ public class MeowObjectManager : MonoBehaviour
 
             activeMeows.Enqueue(spawned.GetComponent<BaseMeow>());
         }
-
         // Set camera to follow the currently active meow
         UpdateCameraFollowing();
     }

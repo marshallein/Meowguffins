@@ -10,11 +10,16 @@ public class CoinCountScript : MonoBehaviour
     [RuntimeInitializeOnLoadMethod]
     static void RunOnStart()
     {
-        coinCount = 0;
+        coinCount = 10;
     }
     void Start()
     {       
         coinText = GetComponent<Text>();
+    }
+
+    private void Update()
+    {
+        coinText.text = coinCount.ToString();
     }
     private void OnEnable()
     {
