@@ -357,19 +357,7 @@ MonoBehaviour:
     m_ActionId: 632209c1-d74e-4f62-b1f5-75cb614f082c
     m_ActionName: Player/Special_Attack[/Keyboard/q]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: -1493680626627989295}
-        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
-        m_MethodName: OnCharacterAttack4
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: c70725f9-980f-4317-9490-bbcec8b51cc4
     m_ActionName: Player/Attack4[/Keyboard/s]
   - m_PersistentCalls:
@@ -392,6 +380,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 04a3d81a-1004-44cf-b968-f3d228d382d3
     m_ActionName: Player/Dodge[/Keyboard/shift]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: ee7713b3-b0a5-42d6-b9f9-66a5f3e1ae88
+    m_ActionName: Player/Switch[/Keyboard/z]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -423,8 +415,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a5035345afbc7744bec739ae2ddd2bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   groundCheck: {fileID: 193370601419949687}
   frontCheck: {fileID: 6470324618621909055}
+  inventory: []
   meowObject: {fileID: 11400000, guid: dd1e965b22246094fa74e46bfbdd3a24, type: 2}
   groundCheckLayer:
     serializedVersion: 2
