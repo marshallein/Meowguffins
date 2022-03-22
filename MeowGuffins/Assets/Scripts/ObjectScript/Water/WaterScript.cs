@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class WaterScript : MonoBehaviour
 {
+    public float damage = 500f;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision != null)
+        if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.SetActive(false);
+            var player = collision.GetComponent<BaseMeow>();
+            player.TakeDamage(damage);
         }
     }
 }

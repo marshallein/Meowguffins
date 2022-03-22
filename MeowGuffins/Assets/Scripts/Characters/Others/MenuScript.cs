@@ -8,8 +8,6 @@ public class MenuScript : MonoBehaviour
 {
     public void PlayGame(InputAction.CallbackContext context)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-
-   
+        SceneManager.LoadScene("CharcatersSelection");
+    } 
 }

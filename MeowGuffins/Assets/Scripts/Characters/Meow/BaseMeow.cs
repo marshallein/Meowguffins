@@ -119,6 +119,11 @@ public abstract class BaseMeow : BaseEntity
         attack_timmer("attack_set4");
     }
 
+    public virtual void Switch(InputAction.CallbackContext context)
+    {
+        MeowObjectManager.Instance.Switch();
+    }
+
     protected void attack_timmer(string trigger)
     {
         if (Time.time >= nextAttackTime)
