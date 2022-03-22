@@ -381,7 +381,19 @@ MonoBehaviour:
     m_ActionId: 04a3d81a-1004-44cf-b968-f3d228d382d3
     m_ActionName: Player/Dodge[/Keyboard/shift]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -1493680626627989295}
+        m_TargetAssemblyTypeName: BaseMeow, Assembly-CSharp
+        m_MethodName: Switch
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: ee7713b3-b0a5-42d6-b9f9-66a5f3e1ae88
     m_ActionName: Player/Switch[/Keyboard/z]
   m_NeverAutoSwitchControlSchemes: 0

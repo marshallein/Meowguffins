@@ -21,6 +21,8 @@ public class MeowObjectManager : MonoBehaviour
     private static MeowObjectManager _instance;
     public static MeowObjectManager Instance { get => _instance; }
 
+    public GameObject DeathMenu;
+
     private void Awake()
     {
         _instance = this;
@@ -44,6 +46,14 @@ public class MeowObjectManager : MonoBehaviour
         }
         // Set camera to follow the currently active meow
         UpdateCameraFollowing();
+    }
+
+    private void Update()
+    {
+        if(ActiveMeow.Health <= 0)
+        {
+            DeathMenu.SetActive(true);
+        }
     }
 
     public void Switch()
