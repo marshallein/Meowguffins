@@ -17,10 +17,10 @@ MonoBehaviour:
   menuSprite: {fileID: -6405229381304896869, guid: 11eba3cc9f4f1b24f8e10ffb3dc42e7c, type: 3}
   moveSpeed: 7
   jumpForce: 25
-  wallJumpTime: 0.02
+  wallJumpTime: 0.05
   wallSlideSpeed: 0.06
   wallDistance: 0.7
-  dodgeTime: 0.4
+  dodgeTime: 0.2
   dodgeDistance: 30
   dodgeCooldown: 2
   attackRate: 2

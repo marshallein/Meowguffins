@@ -6,19 +6,30 @@ public class ChestController : MonoBehaviour
 {
     public const int NumberOfItemsToRoll = 3;
 
-    public bool isOpen;
+    public bool isOpen = false;
+    public bool isSpawmed = true;
     public Animator animator;
     public Transform itemSpawnPoint;
     public List<ItemScriptable> items;
-    public void OpenChest()
+
+    private void FixedUpdate()
     {
-        isOpen = true;
-        if (isOpen == true)
+        if (isOpen)
         {
             Debug.Log("Chest is open");
             animator.SetBool("isOpen", isOpen);
-            SpawnItems();
+            if (isSpawmed)
+            {
+                SpawnItems();
+            }
+            isOpen = false;
+            isSpawmed = false;
         }
+    }
+
+    public void OpenChest()
+    {
+        isOpen = true;
     }
     public void SpawnItems()
     {
