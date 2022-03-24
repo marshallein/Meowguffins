@@ -9,6 +9,7 @@ public abstract class BaseMeow : BaseEntity
     public Transform frontCheck;
     public List<string> inventory;
     public MeowMoveController moveController;
+    public AudioSource audioSourceFx;
     [SerializeField]
     protected MeowObject meowObject;
     public MeowObject MeowObject => meowObject;
@@ -19,7 +20,7 @@ public abstract class BaseMeow : BaseEntity
 
     private List<ItemScriptable> eternalItems;
 
-    
+
     private float damage;
     public float Damage { get => damage; }
 
@@ -77,6 +78,7 @@ public abstract class BaseMeow : BaseEntity
 
     public void OnReadCharacterMove(InputAction.CallbackContext context)
     {
+
         moveController.OnReadCharacterMove(context);
     }
 
@@ -99,33 +101,36 @@ public abstract class BaseMeow : BaseEntity
 
     public virtual void OnCharacterAttack(InputAction.CallbackContext context)
     {
-        print("attack 1 ran");
-        attack_timmer("attack_set");
+            attack_timmer("attack_set");
     }
 
     public virtual void OnCharacterAttack2(InputAction.CallbackContext context)
     {
-        print("attack 2 ran");
-        attack_timmer("attack_set2");
+            attack_timmer("attack_set2");
     }
 
     public virtual void OnCharacterAttack3(InputAction.CallbackContext context)
     {
-        attack_timmer("attack_set3");
+            attack_timmer("attack_set3");
     }
 
     public virtual void OnCharacterAttack4(InputAction.CallbackContext context)
-    {
-        attack_timmer("attack_set4");
+    {      
+            attack_timmer("attack_set4");
+
     }
 
     public virtual void Switch(InputAction.CallbackContext context)
     {
-        MeowObjectManager.Instance.Switch();
+        if (!animator.GetCurrentAnimatorStateInfo(0).IsName("isDodge"))
+        {
+            MeowObjectManager.Instance.Switch();
+        }
     }
 
     protected void attack_timmer(string trigger)
     {
+        if (!IsVulnerable) return;
         if (Time.time >= nextAttackTime)
         {
             animator.SetTrigger(trigger);
@@ -143,12 +148,15 @@ public abstract class BaseMeow : BaseEntity
 
     public override void Heal(float amount)
     {
+        audioSourceFx.Play();
         health = Mathf.Min(MeowObject.Health, health + amount);
         print("Health: " + health);
     }
 
     public void BoostDamage(DamageScriptable boost)
     {
+        audioSourceFx.Play();
+
         activeDamageBoostItem = boost;
         damageBoostTimer = 0;
         UpdateStats();
@@ -157,6 +165,7 @@ public abstract class BaseMeow : BaseEntity
 
     public void AddEternalItem(ItemScriptable item)
     {
+        audioSourceFx.Play();
         eternalItems.Add(item);
         UpdateStats();
     }
@@ -192,10 +201,12 @@ public abstract class BaseMeow : BaseEntity
             if (eternalItem is DamageScriptable)
             {
                 damage += (eternalItem as DamageScriptable).amount;
-            } else if (eternalItem is SpeedScriptable)
+            }
+            else if (eternalItem is SpeedScriptable)
             {
                 moveController.moveSpeed += (eternalItem as SpeedScriptable).amount;
-            } else if (eternalItem is JumpForceScriptable)
+            }
+            else if (eternalItem is JumpForceScriptable)
             {
                 moveController.jumpForce += (eternalItem as JumpForceScriptable).amount;
             }

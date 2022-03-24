@@ -9,6 +9,7 @@ public abstract class BaseEntity : MonoBehaviour
     protected Animator animator;
     float nextAnimTime = 0f;
     float frameRate = 2f;
+    public AudioSource takeHitFx;
 
     protected float health;
     public float Health { get => health; }
@@ -25,7 +26,7 @@ public abstract class BaseEntity : MonoBehaviour
         if (IsVulnerable)
         {
             health -= damage;
-
+            takeHitFx.Play();
             if (health <= 0)
             {
                 PlayDeathAnimation();

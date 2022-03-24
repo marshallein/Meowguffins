@@ -8,6 +8,8 @@ public class DumbleMeow : BaseMeow
     public Transform attack_point;
     public GameObject fireball;
     public float fireballForce = 12f;
+    public AudioSource fireBallFX;
+    public AudioSource teleportFx;
 
     private float m_LastDodge = -100f;
     public float horizontal_axis;
@@ -39,19 +41,25 @@ public class DumbleMeow : BaseMeow
             fireballGO.transform.rotation = new Quaternion(0, -180, 0, 0);
             fbRB.velocity = fireballGO.transform.right * fireballForce;
         }
+        fireBallFX.Play();
         nextAttackTime = Time.time + 1f / MeowObject.AttackRate;
 
     }
 
     public override void OnCharacterAttack3(InputAction.CallbackContext context)
     {
-        if (CoinCountScript.coinCount < 10)
+        if (context.performed == true)
         {
-            return;
+            Debug.Log("heal 1 time");
+            if (CoinCountScript.coinCount < 5)
+            {
+                return;
+            }
+            attack_timmer("healing");
+            CoinCountScript.coinCount -= 5;
+            health = Mathf.Min(MeowObject.Health, health + healAmount);
         }
-        attack_timmer("healing");
-        CoinCountScript.coinCount -= 10;
-        health = Mathf.Min(MeowObject.Health, health + healAmount);
+
     }
 
     public override void OnCharacterAttack4(InputAction.CallbackContext context)
@@ -92,6 +100,7 @@ public class DumbleMeow : BaseMeow
     private void TeleportCharacter()
     {
         animator.SetTrigger("isDodge");
+        teleportFx.Play();
         transform.position = new Vector3(transform.position.x + (horizontal_axis * moveController.meow.MeowObject.DodgeDistance), transform.position.y);
     }
 
