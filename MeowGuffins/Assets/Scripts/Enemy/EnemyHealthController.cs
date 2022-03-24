@@ -6,6 +6,7 @@ public class EnemyHealthController : MonoBehaviour
 {
 
     public float maxHeath;
+    public AudioSource hitFx; 
 
 
     [SerializeField]
@@ -13,6 +14,7 @@ public class EnemyHealthController : MonoBehaviour
     private EnenyMeleeBehaviour m_enemyMeleeBehaviour;
     private Animator m_animator;
     private CoinScriptable coin;
+
 
     private void Awake()
     {
@@ -31,6 +33,10 @@ public class EnemyHealthController : MonoBehaviour
     {
         m_enemyMeleeBehaviour.dazedTime = m_enemyMeleeBehaviour.startDazedTime;
         currentHeath -= inputDamage;
+        if (this.gameObject.activeInHierarchy)
+        {
+            hitFx.Play();
+        }
         if (currentHeath <= 0)
         {
             m_animator.SetTrigger("isDead");

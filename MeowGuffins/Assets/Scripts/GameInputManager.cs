@@ -23,27 +23,42 @@ public class GameInputManager : MonoBehaviour
 
     public virtual void OnCharacterAttack(InputAction.CallbackContext context)
     {
-        MeowObjectManager.Instance.ActiveMeow.OnCharacterAttack(context);
+        if (context.performed)
+        {
+            MeowObjectManager.Instance.ActiveMeow.OnCharacterAttack(context);
+        }
     }
 
     public virtual void OnCharacterAttack2(InputAction.CallbackContext context)
     {
-        MeowObjectManager.Instance.ActiveMeow.OnCharacterAttack2(context);
+        if (context.performed)
+        {
+            MeowObjectManager.Instance.ActiveMeow.OnCharacterAttack2(context);
+        }
     }
 
     public virtual void OnCharacterAttack3(InputAction.CallbackContext context)
     {
-        MeowObjectManager.Instance.ActiveMeow.OnCharacterAttack3(context);
+        if (context.performed)
+        {
+            MeowObjectManager.Instance.ActiveMeow.OnCharacterAttack3(context);
+        }
     }
 
     public virtual void OnCharacterAttack4(InputAction.CallbackContext context)
     {
-        MeowObjectManager.Instance.ActiveMeow.OnCharacterAttack4(context);
+        if (context.performed)
+        {
+            MeowObjectManager.Instance.ActiveMeow.OnCharacterAttack4(context);
+        }
     }
 
     public void testSwitchCharacter(InputAction.CallbackContext context)
     {
-        MeowObjectManager.Instance.Switch();
+        if (context.performed)
+        {
+            MeowObjectManager.Instance.Switch();
+        }
     }
 
     public void Test()

@@ -10,6 +10,7 @@ public class WaterScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             var player = collision.GetComponent<BaseMeow>();
+            player.IsVulnerable = true;
             player.TakeDamage(damage);
         }
     }

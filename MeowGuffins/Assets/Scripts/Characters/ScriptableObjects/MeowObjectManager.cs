@@ -27,7 +27,7 @@ public class MeowObjectManager : MonoBehaviour
     {
         _instance = this;
         activeMeows = new Queue<BaseMeow>();
-
+        Time.timeScale = 1.0f;
         List<MeowObject> selection;
         if (SelectionScript.SelectedCards == null)
         {

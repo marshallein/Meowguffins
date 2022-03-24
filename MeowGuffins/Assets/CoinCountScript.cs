@@ -7,6 +7,8 @@ public class CoinCountScript : MonoBehaviour
 {
     Text coinText;
     public static int coinCount = 0;
+    public AudioSource coinSource;
+
     [RuntimeInitializeOnLoadMethod]
     static void RunOnStart()
     {
@@ -32,6 +34,7 @@ public class CoinCountScript : MonoBehaviour
      
     private void EventManager_CoinCollected()
     {
+        coinSource.Play();
         coinCount++;
         coinText.text = coinCount.ToString(); //TODO:
     }

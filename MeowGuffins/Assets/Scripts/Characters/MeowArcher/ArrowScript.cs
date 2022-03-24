@@ -21,7 +21,7 @@ public class ArrowScript : MonoBehaviour
     {
         if (isSpecial)
         {
-            baseDamage = 25f;
+            baseDamage = 50f;
         }
         var finalDamage = baseDamage + (damageBoost == null ? 0 : damageBoost.amount);
         if (collision.gameObject.tag == "Enemy")
