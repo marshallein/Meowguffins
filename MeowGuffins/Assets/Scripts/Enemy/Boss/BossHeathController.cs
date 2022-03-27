@@ -8,6 +8,7 @@ public class BossHeathController : MonoBehaviour
     public Slider healthBar;
     public float maxHealth;
     public GameObject spike;
+    public AudioSource takehit;
 
     private float m_currentHealth;
     private Animator m_animator;
@@ -46,6 +47,7 @@ public class BossHeathController : MonoBehaviour
         {
             return;
         }
+        takehit.Play();
         m_currentHealth -= damage;
         if (m_currentHealth <= 0)
         {
