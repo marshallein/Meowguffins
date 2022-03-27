@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class StartButton : MonoBehaviour
 {
+    public GameObject currentObject;
+    public GameObject gameCanvas;
     public void OnClick()
     {
         if(SelectionScript.SelectedCards.Count < 2)
@@ -12,6 +14,12 @@ public class StartButton : MonoBehaviour
             return;
         }
         SceneManager.LoadScene("Scene1_Jungle");
+    }
+
+    public void Back()
+    {
+        currentObject.SetActive(false);
+        gameCanvas.SetActive(true);
     }
 
     public void OnClickBossScene()
