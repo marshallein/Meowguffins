@@ -7,6 +7,10 @@ public class StartButton : MonoBehaviour
 {
     public void OnClick()
     {
+        if(SelectionScript.SelectedCards.Count < 2)
+        {
+            return;
+        }
         SceneManager.LoadScene("Scene1_Jungle");
     }
 
